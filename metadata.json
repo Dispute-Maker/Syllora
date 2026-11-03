@@ -1,0 +1,8 @@
+{
+  "name": "Syllora",
+  "description": "Comprehensive academic learning resources portal with official MCA syllabus, unit notes, question papers, verified solutions, and video lectures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
