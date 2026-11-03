@@ -14,28 +14,28 @@ export const COURSES: Course[] = [
         title: 'Semester I',
         description: 'Programming in C with Data Structure, Statistical Mathematics, Operating System & Architecture, IT, Communication Skills & Practical Labs',
         totalCredits: 24,
-        syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf'
+        syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf'
       },
       {
         number: 2,
         title: 'Semester II',
         description: 'DBMS, Computer Networks, Software Engineering & UML, Algorithm Design, Java & OOPS, with Hands-on Labs',
         totalCredits: 24,
-        syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf'
+        syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf'
       },
       {
         number: 3,
         title: 'Semester III',
         description: 'Data Mining, Artificial Intelligence, and Specialized Departmental Electives (Python, Web Tech, ML, IoT, Cloud, Ethics)',
         totalCredits: 24,
-        syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf'
+        syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf'
       },
       {
         number: 4,
         title: 'Semester IV',
         description: 'Major Project / Industrial Dissertation & Advanced Electives (Deep Learning, Cloud Computing, Big Data, Blockchain, InfoSec)',
         totalCredits: 20,
-        syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf'
+        syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf'
       },
     ]
   },
@@ -79,7 +79,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Fundamentals of C programming, pointers, linear data structures, stacks, queues, lists, trees, graphs, heaps, and asymptotic algorithm complexity analysis.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     books: [
       'Kerninghan & Ritchie, "The C programming language", PHI',
       'Schildt, "C: The Complete reference", 4th ed TMH',
@@ -154,7 +154,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Matrices and eigenvalue problems, calculus, testing of hypothesis, probability distributions, and discrete mathematics.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     books: [
       'B.S. Grewal, "Higher Engineering Mathematics", Khanna Publishers, 43rd Edition, 2015',
       'James Stewart, "Calculus", 7th edition',
@@ -229,7 +229,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Register transfer language, computer organization, 8086 architecture, process scheduling, memory management, IPC, deadlocks, and file systems.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     books: [
       'Milenkovic, M., "Operating Systems - Concepts and Design", McGraw Hill, 1992',
       'Galvin P., J.L. Abraham Silberschatz, "Operating System Concepts", John Wiley & Sons, 1989',
@@ -304,7 +304,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Modern communication systems (5G, GIS), information security, artificial intelligence branches, IoT, virtual reality, and cloud computing architectures.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     books: [
       'Alex Leon & M. Leon, "Fundamental of Information Technology", Vikas Publications',
       'C.P. Pfleeger, D.N. Shah, "Security in Computing", 3rd Ed, Prentice Hall, 2002',
@@ -377,7 +377,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Listening and speaking techniques, technical reading and writing, interpersonal communication, group dynamics, leadership, and professional interview preparation.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     books: [
       'Sanghi, Seema, "Improve your communication skills", 2nd edition',
       'Burnard, Philip, "Interpersonal skills Training: A source book of activities", 2005',
@@ -447,7 +447,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Practical laboratory implementation of C programming control structures, pointers, arrays, stacks, queues, linked lists, trees, and file operations.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     units: [],
     practicals: [
       'Program using control structures (if else, switch)',
@@ -472,7 +472,7 @@ export const SUBJECTS: Subject[] = [
     semester: 1,
     isElective: false,
     description: 'Practical simulation experiments for CPU scheduling algorithms, file allocation strategies, memory allocation schemes, deadlocks, and disk scheduling.',
-    syllabusPdfUrl: './assets/aistudio/Sem-1_a0cc93e3.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
     units: [],
     practicals: [
       'Program for CPU Scheduling Algorithms: FCFS, SJF, Round Robin (pre-emptive), Priority',
@@ -496,7 +496,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Relational data modeling, ER diagrams, relational algebra, SQL/PL-SQL, functional dependencies, 1NF to 5NF normalization, ACID transactions, and indexing.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     books: [
       'A. Silberschatz, H.F Korth, Sudersan, "Database System Concepts", MGH',
       'C.J Date, "An introduction to Database Systems", 6th ed',
@@ -574,7 +574,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'ISO-OSI model, physical media, data link protocols, sliding window, LAN standards (802.3, 802.5), routing algorithms, TCP/UDP, and wireless broadband.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     books: [
       'A.S. Tanenbaum, "Computer Network", 4th addition, PHI',
       'Forouzan, "Data Communication and Networking", 3ed, TMH',
@@ -648,7 +648,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Software lifecycle models, requirements engineering, SRS, architectural design, software metrics, testing strategies, and UML diagrams.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     books: [
       'Roger S. Pressman, "Software Engineering: A Practitioner\'s Approach", 8th Edition, 2015',
       'I. Sommerville, "Software Engineering", 6th Edition, Addison Wesley, 2004',
@@ -717,7 +717,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Abstract data types, balanced trees, graph algorithms, divide-and-conquer, dynamic programming, backtracking, NP-completeness, and amortized analysis.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     books: [
       'Ullman, "Analysis and Design of Algorithm", TMH',
       'Goodman, "Introduction to the Design & Analysis of Algorithms", TMH, 2002',
@@ -790,7 +790,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Java OOP foundations, multithreading, exception handling, JDBC connectivity, Collections, AWT/Swings, Servlets, JSP, and Struts framework.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     books: [
       'Naughton & Schildt, "The Complete Reference Java 2", Tata McGraw Hill',
       'Deitel, "Java- How to Program", Pearson Education',
@@ -864,7 +864,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Hands-on practical programming in Java including control logic, constructors, inheritance, interfaces, arrays, strings, method overloading/overriding, and student stream calculations.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     units: [],
     practicals: [
       'Write a Java program to determine maximum from given 100 numbers',
@@ -894,7 +894,7 @@ export const SUBJECTS: Subject[] = [
     semester: 2,
     isElective: false,
     description: 'Comprehensive 45 practical SQL queries and schema implementations covering Salesmen, Customers, Orders databases, DDL/DML, constraints, subqueries, and join operations.',
-    syllabusPdfUrl: './assets/aistudio/Sem-2_7721c943.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
     units: [],
     practicals: [
       'Create and populate Salesmen, Customers, and Orders relational database tables with constraints',
@@ -923,7 +923,7 @@ export const SUBJECTS: Subject[] = [
     semester: 3,
     isElective: false,
     description: 'Data warehousing, OLAP multidimensional data cubes, data preprocessing, Apriori association rule mining, classification, and cluster analysis.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'J. Han and M. Kamber, "Data Mining: Concepts and Techniques", Morgan Kaufmann',
       'Berson, "Data warehousing, Data Mining & OLAP", TMH',
@@ -994,7 +994,7 @@ export const SUBJECTS: Subject[] = [
     semester: 3,
     isElective: false,
     description: 'AI problems, LISP programming, heuristic search (A*, AO*), knowledge representation, predicate calculus, NLP, Minimax game playing, and expert systems.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Elaine Rich and Kevin Knight, "Artificial Intelligence", Tata McGraw Hill',
       'Dan W. Patterson, "Introduction to Artificial Intelligence and Expert Systems", Prentice India',
@@ -1066,7 +1066,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – I',
     description: 'Python fundamentals, control flow, functions, lists, tuples, dictionaries, object-oriented programming, classes, file I/O, and modules.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Reema Thareja, "Python Programming using Problem Solving Approach", Oxford University Press, 2017',
       'Allen B. Downey, "Think Python: How to Think Like a Computer Scientist", 2nd Ed, O\'Reilly',
@@ -1136,7 +1136,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – I',
     description: 'Client-server Internet architecture, HTML5, CSS positioning, JavaScript DOM manipulation, XML/XSLT transformations, AJAX, and Web Services.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Jeffrey C. Jackson, "Web Technologies - A Computer Science Perspective", Pearson Education',
       'Ralph Moseley and M. T. Savaliya, "Developing Web Applications", Wiley-India',
@@ -1204,7 +1204,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – I',
     description: 'Data science lifecycle, statistical inference, R data analysis, NoSQL databases (MongoDB, HBase), Hadoop ecosystem, MapReduce, and stream analytics.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Bill Franks, "Taming the Big Data Tidal Wave", John Wiley & Sons',
       'Rachel Schutt, Cathy O\'Neil, "Doing Data Science", O\'Reilly'
@@ -1274,7 +1274,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – II',
     description: 'Supervised and unsupervised learning, backpropagation, CNN architectures, RNN/LSTM, reinforcement learning (MDP, Q-learning), and Support Vector Machines.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Christopher M. Bishop, "Pattern Recognition and Machine Learning", Springer, 2011',
       'Tom M. Mitchell, "Machine Learning", McGraw Hill Education, 2017',
@@ -1341,7 +1341,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – II',
     description: 'Artificial neural networks, Perceptrons, backpropagation, Kohonen Self-Organizing Maps, Fuzzy Logic controllers, and Genetic Algorithms.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'R. Rajasekaran and G. A. Vijayalakshmi Pai, "Neural Networks, Fuzzy Logic, and Genetic Algorithms", PHI',
       'D. E. Goldberg, "Genetic Algorithms in Search, Optimisation, and Machine Learning", Addison-Wesley'
@@ -1406,7 +1406,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – II',
     description: 'IoT conceptual framework, M2M, web connectivity protocols (REST, WebSockets), sensor technology, RFID, Raspberry Pi, Arduino, and smart city implementations.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Rajkamal, "Internet of Things", Tata McGraw Hill',
       'Vijay Madisetti and Arshdeep Bahga, "Internet of Things (A Hands-on-Approach)", Universal Press',
@@ -1474,7 +1474,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – III',
     description: 'Ethics in IT organizations, computer crime, intellectual property, software product liability, privacy legislation, and social networking responsibilities.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'George W. Reynolds, "Ethics in Information Technology", 3rd Edition, Cengage Learning',
       'Deborah Johnson, "Computer Ethics", 4th Edition',
@@ -1541,7 +1541,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – III',
     description: 'Object-relational databases, deductive databases, parallel & distributed databases, multi-level transactions, active ECA rules, and multimedia spatial databases.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Elmasri, "Fundamentals of Database Systems", 4th Edition, Pearson',
       'R. Ramakrishnan, "Database Management Systems", McGraw Hill',
@@ -1609,7 +1609,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – III',
     description: 'Distributed systems architectures, RPC, clock synchronization, election algorithms, fault tolerance, replication, CORBA, and distributed shared memory.',
-    syllabusPdfUrl: './assets/aistudio/Sem-3_8353c851.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
     books: [
       'Andrew S. Tanenbaum, Maarten Van Steen, "Distributed Systems Principles and Paradigms", Pearson',
       'George Coulouris, "Distributed Systems: Design and Concepts", Pearson Education',
@@ -1682,7 +1682,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – IV',
     description: 'Advanced Python OOP, iterators, generators, decorators, file streams, SQLite database access, Tkinter GUI, NumPy, Pandas, Matplotlib, and Scikit-Learn.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Michael Urban and Joel Murach, "Python Programming", Shroff/Murach, 2016',
       'Mark Lutz, "Programming Python", O\'Reilly, 4th Edition, 2010'
@@ -1748,7 +1748,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – IV',
     description: 'Bootstrap responsive design, XML validation, XSLT, AJAX with PHP backend, RESTful web services consumption, jQuery DOM selectors, and event handling.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Ivan Bayross and Sharanam Shah, "AJAX For Beginners", SPD',
       'Richard York, "Web Development with jQuery", Wrox',
@@ -1818,7 +1818,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – IV',
     description: 'HDFS, MapReduce, YARN, K-means clustering, Decision Trees, Apriori recommendation systems, real-time stream sentiment analytics, and NoSQL databases.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Anand Rajaraman and Jeffrey David Ullman, "Mining of Massive Datasets", Cambridge University Press',
       'David Loshin, "Big Data Analytics", Morgan Kaufmann, 2013',
@@ -1886,7 +1886,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – V',
     description: 'Feed-forward perceptrons, backpropagation in TensorFlow, CNN architectures (LeNet, AlexNet, ResNet), deep network regularization, LSTM, and Deep Q Networks.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Nikhil Buduma, Nicholas Locascio, "Fundamentals of Deep Learning", O\'Reilly, 2017',
       'Sudharsan Ravichandiran, "Hands on Deep Learning Algorithms with Python", Packt, 2019',
@@ -1950,7 +1950,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – V',
     description: 'NIST cloud architecture, IaaS/PaaS/SaaS service models, hypervisors, server virtualization, AWS/Azure/GCP platforms, Hadoop MapReduce, and cloud security.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Anthony T. Velte, Toby J. Velte, Robert Elsenpeter, "Cloud Computing: A Practical Approach", McGrawHill',
       'Kai Hwang, Geoffrey C. Fox, Jack G. Dongarra, "Distributed and Cloud Computing", Morgan Kaufmann',
@@ -2016,7 +2016,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – V',
     description: 'Search Engine Optimization (SEO), on-page and off-page optimization, Google AdWords SEM campaigns, mobile marketing, social media marketing, and email analytics.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Digital Firefly Marketing, "Big Book of Digital Marketing"',
       'Damian Ryan, Calvin Jones, "Understanding Digital Marketing", Kogan Page',
@@ -2083,7 +2083,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – VI',
     description: 'NSTISSC security model, security SDLC, threat investigations, access control matrix, risk assessment, ISO 17799/BS7799 standards, and IDS scanning tools.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Michael E Whitman and Herbert J Mattord, "Principles of Information Security", Vikas, 2003',
       'Micki Krause, Harold F. Tipton, "Handbook of Information Security Management", CRC Press',
@@ -2149,7 +2149,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – VI',
     description: 'Blockchain distributed ledger, proof-of-work/stake consensus, Bitcoin transactions, Ethereum EVM, smart contracts in Solidity, Hyperledger, and decentralized apps.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Josh Thompson, "Blockchain: The Blockchain for Beginnings", CreateSpace, 2017',
       'Arvind Narayanan et al., "Bitcoin and Cryptocurrency Technologies", Princeton University Press, 2016'
@@ -2212,7 +2212,7 @@ export const SUBJECTS: Subject[] = [
     isElective: true,
     electiveGroup: 'Elective – VI',
     description: 'Wireless transmission multiplexing (SDMA, TDMA, CDMA), GSM architecture, Mobile IP, ad-hoc wireless routing (DSDV, DSR, AODV), MANETs, and mobile OS platforms.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     books: [
       'Jochen Schiller, "Mobile Communications", 2nd Edition, Pearson Education, 2003',
       'William Stallings, "Wireless Communications and Networks", 2nd Edition, Pearson'
@@ -2275,7 +2275,7 @@ export const SUBJECTS: Subject[] = [
     semester: 4,
     isElective: false,
     description: 'Full-term comprehensive capstone project with industry or university lab documentation, technical defense, and IEEE/UGC compliant dissertation submission.',
-    syllabusPdfUrl: './assets/aistudio/Sem-4_05732143.pdf',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
     units: [
       {
         unitNumber: 1,

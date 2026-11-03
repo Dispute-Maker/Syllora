@@ -14,12 +14,14 @@ app.use(express.json());
 // Serve static assets from Vite build output if directory exists
 const distPath = path.join(__dirname, 'dist');
 if (fs.existsSync(distPath)) {
+  app.use('/Syllora', express.static(distPath));
   app.use(express.static(distPath));
 }
 
 // Serve public assets if available
 const publicPath = path.join(__dirname, 'public');
 if (fs.existsSync(publicPath)) {
+  app.use('/Syllora', express.static(publicPath));
   app.use(express.static(publicPath));
 }
 
