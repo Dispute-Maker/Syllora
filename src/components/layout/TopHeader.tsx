@@ -15,7 +15,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({ onToggleSidebar, isSidebar
   const navigate = useNavigate();
 
   return (
-    <header className="sticky top-0 z-30 h-16 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-800 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <header className="sticky top-0 z-30 h-16 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-800 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <div className="flex items-center gap-3 sm:gap-4">
         {!isSidebarOpen && (
           <button

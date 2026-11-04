@@ -25,3 +25,51 @@
 .animate-fadeIn {
   animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Custom Scroll Slide Bar matching page background in light and dark mode */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F3FC;
+}
+
+html.dark ::-webkit-scrollbar-track,
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Scroll level indicator (thumb) clearly visible */
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+  border: 2px solid #F2F3FC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E6A02D;
+}
+
+html.dark ::-webkit-scrollbar-thumb,
+.dark ::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 9999px;
+  border: 2px solid #000000;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover,
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #E6A02D;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #F2F3FC;
+}
+
+html.dark *,
+.dark * {
+  scrollbar-color: #52525b #000000;
+}

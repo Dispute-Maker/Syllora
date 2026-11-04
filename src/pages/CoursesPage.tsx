@@ -49,38 +49,38 @@ export const CoursesPage: React.FC = () => {
   // Helper to render Category Switcher tabs
   const renderCategorySwitcher = () => {
     return (
-      <div className="flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800/80 p-1.5 rounded-2xl border border-neutral-200/80 dark:border-neutral-700/60 max-w-fit">
+      <div className="flex items-center gap-0.5 sm:gap-2 bg-[#F2F3FC] dark:bg-neutral-950 p-0.5 sm:p-1.5 rounded-xl sm:rounded-2xl border border-neutral-200/80 dark:border-neutral-800 w-full sm:w-fit">
         <button
           onClick={() => setCategory('syllabus')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+          className={`flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-2 px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10.5px] sm:text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
             activeCategory === 'syllabus'
               ? 'bg-[#E6A02D] text-white shadow-sm'
-              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white'
+              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white hover:bg-neutral-200/60 dark:hover:bg-neutral-900'
           }`}
         >
-          <GraduationCap className="w-3.5 h-3.5" />
+          <GraduationCap className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
           <span>Syllabus</span>
         </button>
         <button
           onClick={() => setCategory('notes')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+          className={`flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-2 px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10.5px] sm:text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
             activeCategory === 'notes'
               ? 'bg-[#E6A02D] text-white shadow-sm'
-              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white'
+              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white hover:bg-neutral-200/60 dark:hover:bg-neutral-900'
           }`}
         >
-          <BookMarked className="w-3.5 h-3.5" />
+          <BookMarked className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
           <span>Notes</span>
         </button>
         <button
           onClick={() => setCategory('pyq')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+          className={`flex-1 sm:flex-initial flex items-center justify-center gap-1 sm:gap-2 px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10.5px] sm:text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
             activeCategory === 'pyq'
               ? 'bg-[#E6A02D] text-white shadow-sm'
-              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white'
+              : 'text-neutral-600 dark:text-neutral-300 hover:text-[#25252B] dark:hover:text-white hover:bg-neutral-200/60 dark:hover:bg-neutral-900'
           }`}
         >
-          <FileQuestion className="w-3.5 h-3.5" />
+          <FileQuestion className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
           <span>Question Papers</span>
         </button>
       </div>
@@ -174,7 +174,7 @@ export const CoursesPage: React.FC = () => {
         <Breadcrumbs items={[{ label: 'Courses', path: '/courses' }, { label: currentCourse.code }]} />
 
         {/* Top Header with Category Switcher */}
-        <div className="bg-white dark:bg-neutral-800 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
+        <div className="bg-white dark:bg-neutral-800 p-5 sm:p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#E6A02D]">
@@ -277,7 +277,7 @@ export const CoursesPage: React.FC = () => {
         />
 
         {/* Semester Header with Category Switcher and Official PDF Download Link */}
-        <div className="bg-white dark:bg-neutral-800 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
+        <div className="bg-white dark:bg-neutral-800 p-5 sm:p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2">
@@ -542,7 +542,7 @@ export const CoursesPage: React.FC = () => {
         />
 
         {/* Subject Header */}
-        <div className="bg-white dark:bg-neutral-800 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
+        <div className="bg-white dark:bg-neutral-800 p-5 sm:p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-5">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <div className="flex flex-wrap items-center gap-2">
