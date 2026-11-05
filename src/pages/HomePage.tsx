@@ -15,11 +15,9 @@ export const HomePage: React.FC = () => {
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchTerm.trim()) {
-      navigate(`/explore?q=${encodeURIComponent(searchTerm.trim())}`);
-    } else {
-      navigate('/explore');
-    }
+    const query = searchTerm.trim();
+    if (!query) return;
+    navigate(`/explore?q=${encodeURIComponent(query)}`);
   };
 
   // Primary 3 MCA categories requested by user

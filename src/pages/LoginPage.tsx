@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { GraduationCap, LogIn, Sparkles, AlertCircle } from 'lucide-react';
+import { GraduationCap, LogIn, UserCheck, AlertCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export const LoginPage: React.FC = () => {
@@ -117,7 +117,7 @@ export const LoginPage: React.FC = () => {
             onClick={handleDemoFill}
             className="w-full py-2.5 px-3 rounded-xl border border-amber-300 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 text-[#E6A02D] text-xs font-semibold hover:bg-amber-100 transition-colors flex items-center justify-center gap-2 cursor-pointer"
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <UserCheck className="w-3.5 h-3.5" />
             <span>Fill Demo Credentials (1-Click)</span>
           </button>
         </div>

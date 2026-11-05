@@ -45,16 +45,16 @@ export const COURSES: Course[] = [
     name: 'Bachelor of Technology (CSE)',
     duration: '4 Years (8 Semesters)',
     status: 'coming_soon',
-    description: 'Undergraduate engineering syllabus resources are currently being compiled.',
+    description: 'Undergraduate engineering syllabus resources and core computer science curriculums are currently being compiled.',
     semesters: []
   },
   {
-    id: 'llb',
-    code: 'LL.B',
-    name: 'Bachelor of Legislative Law',
-    duration: '3 Years (6 Semesters)',
+    id: 'mba',
+    code: 'MBA',
+    name: 'Master of Business Administration',
+    duration: '2 Years (4 Semesters)',
     status: 'coming_soon',
-    description: 'Legal studies syllabus and case study repositories under verification.',
+    description: 'Postgraduate business management, marketing, finance, and organizational leadership curriculum under compilation.',
     semesters: []
   },
   {
@@ -63,7 +63,25 @@ export const COURSES: Course[] = [
     name: 'Bachelor of Pharmacy',
     duration: '4 Years (8 Semesters)',
     status: 'coming_soon',
-    description: 'Pharmaceutical sciences resources are currently in the curation pipeline.',
+    description: 'Pharmaceutical sciences resources, medicinal chemistry, and pharmacology curriculums under curation.',
+    semesters: []
+  },
+  {
+    id: 'llb',
+    code: 'LLB',
+    name: 'Bachelor of Legislative Law',
+    duration: '3 Years (6 Semesters)',
+    status: 'coming_soon',
+    description: 'Legal studies syllabus, jurisprudence, constitutional law, and court procedure repositories under academic verification.',
+    semesters: []
+  },
+  {
+    id: 'other',
+    code: 'Other Courses',
+    name: 'Other Academic Programmes',
+    duration: 'Various Disciplines',
+    status: 'coming_soon',
+    description: 'Additional university degree programmes and curriculums are being planned for upcoming releases.',
     semesters: []
   }
 ];
