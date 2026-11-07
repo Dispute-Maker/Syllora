@@ -12,28 +12,28 @@ export const COURSES: Course[] = [
       {
         number: 1,
         title: 'Semester I',
-        description: 'Programming in C with Data Structure, Statistical Mathematics, Operating System & Architecture, IT, Communication Skills & Practical Labs',
+        description: 'Programming in C with Data Structure, Statistical Mathematics, Operating System & Architecture, Information Technology, and Communication Skills',
         totalCredits: 24,
         syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf'
       },
       {
         number: 2,
         title: 'Semester II',
-        description: 'DBMS, Computer Networks, Software Engineering & UML, Algorithm Design, Java & OOPS, with Hands-on Labs',
+        description: 'DBMS, Computer Networks, Software Engineering & UML, Algorithm Design, and Java & OOPS',
         totalCredits: 24,
         syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf'
       },
       {
         number: 3,
         title: 'Semester III',
-        description: 'Data Mining, Artificial Intelligence, and Specialized Departmental Electives (Python, Web Tech, ML, IoT, Cloud, Ethics)',
+        description: 'Python, Distributed System, Internet of Things (IoT), Artificial Intelligence, and Data Mining',
         totalCredits: 24,
         syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf'
       },
       {
         number: 4,
         title: 'Semester IV',
-        description: 'Major Project / Industrial Dissertation & Advanced Electives (Deep Learning, Cloud Computing, Big Data, Blockchain, InfoSec)',
+        description: 'Provisional Curriculum: Advanced Python, Advanced Distributed Systems, Advanced IoT, Advanced Artificial Intelligence, and Advanced Data Mining (Subject to confirmation)',
         totalCredits: 20,
         syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf'
       },
@@ -77,7 +77,7 @@ export const COURSES: Course[] = [
   },
   {
     id: 'other',
-    code: 'Other Courses',
+    code: 'Etc.',
     name: 'Other Academic Programmes',
     duration: 'Various Disciplines',
     status: 'coming_soon',
@@ -458,51 +458,6 @@ export const SUBJECTS: Subject[] = [
       }
     ]
   },
-  {
-    id: 'mca-106',
-    code: 'MCA 106',
-    name: 'C and DS Lab',
-    semester: 1,
-    isElective: false,
-    description: 'Practical laboratory implementation of C programming control structures, pointers, arrays, stacks, queues, linked lists, trees, and file operations.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
-    units: [],
-    practicals: [
-      'Program using control structures (if else, switch)',
-      'Program using iterative structures (for, while, do-while)',
-      'Array manipulation programs',
-      'String manipulation programs',
-      'Program using structures and unions',
-      'Program for Stack contiguous operations',
-      'Implement Stack using Linked lists to convert infix expression to postfix expression',
-      'Program for Queue using pointers',
-      'Linked List using Arrays',
-      'Program for Linked list using pointers (Singly, Doubly)',
-      'Program using dynamic allocation operators (malloc, calloc, free)',
-      'File handling program (read, write, append)',
-      'Program for Binary Tree creation and traversals'
-    ]
-  },
-  {
-    id: 'mca-107',
-    code: 'MCA 107',
-    name: 'Operating System Lab',
-    semester: 1,
-    isElective: false,
-    description: 'Practical simulation experiments for CPU scheduling algorithms, file allocation strategies, memory allocation schemes, deadlocks, and disk scheduling.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-1_a0cc93e3.pdf',
-    units: [],
-    practicals: [
-      'Program for CPU Scheduling Algorithms: FCFS, SJF, Round Robin (pre-emptive), Priority',
-      'Program for File Allocation Strategies: Sequential, Indexed, Linked Memory',
-      'Program to simulate contiguous memory allocation: Worst-fit, Best-fit, First-fit',
-      'Program for Deadlock Management Techniques (Banker\'s Algorithm)',
-      'Program to simulate disk scheduling algorithms: FCFS, SCAN, C-SCAN',
-      'Program for Page Replacement Algorithms: FIFO, LRU, LFU',
-      'Program to simulate producer-consumer problem using semaphores',
-      'Program to simulate Dining-Philosophers synchronization problem'
-    ]
-  },
 
   // ==========================================
   // SEMESTER 2 (Official RGPV Syllabus)
@@ -875,68 +830,284 @@ export const SUBJECTS: Subject[] = [
       }
     ]
   },
-  {
-    id: 'mca-206',
-    code: 'MCA 206',
-    name: 'Java and OOPS lab',
-    semester: 2,
-    isElective: false,
-    description: 'Hands-on practical programming in Java including control logic, constructors, inheritance, interfaces, arrays, strings, method overloading/overriding, and student stream calculations.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
-    units: [],
-    practicals: [
-      'Write a Java program to determine maximum from given 100 numbers',
-      'Write a Java program to calculate the factorial of a given number',
-      'Java program to check whether a given character is alphabet or not',
-      'Java program to find sum of all digits',
-      'Write a Java program to add two binary numbers',
-      'Write a Java program for switch statement',
-      'Write a Java program to print perfect numbers',
-      'Write a Java program to convert a decimal number to binary number',
-      'Write a Java program for Parameterized Constructor',
-      'Write a Java program using while loop, do while loop, for loop',
-      'Write a Java program to check whether number is Armstrong or not',
-      'Write a Java program for Hierarchical Inheritance',
-      'Write a Java program for abstract class and for interface',
-      'Write a Java program to declare, initialize and display contents of array of 5 integers and array length',
-      'Write a program to accept a string and count total capital and small letters',
-      'Write a Java program to generate sequential items (0,1,1,2,3...)',
-      'Write a Java program for method overloading and method overriding',
-      'Design a class Student with marks calculation and stream assignment (Computer, Electronics, Mechanical, Chemical, Civil)'
-    ]
-  },
-  {
-    id: 'mca-207',
-    code: 'MCA 207',
-    name: 'DBMS lab',
-    semester: 2,
-    isElective: false,
-    description: 'Comprehensive 45 practical SQL queries and schema implementations covering Salesmen, Customers, Orders databases, DDL/DML, constraints, subqueries, and join operations.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-2_7721c943.pdf',
-    units: [],
-    practicals: [
-      'Create and populate Salesmen, Customers, and Orders relational database tables with constraints',
-      'Produce order number, amount and date for all orders',
-      'Query all customer records assigned to salesman 1001',
-      'Display city, salesman name, number, and commission sorted by city',
-      'List ratings followed by customer name for specific cities (e.g. Surat)',
-      'List distinct salesman numbers with active customer orders',
-      'List all orders exceeding value threshold (Rs. 1000)',
-      'Filter salesmen in London with commission above 10%',
-      'Pattern matching queries using LIKE (\'C%\', \'[A-G]%\')',
-      'Aggregate queries: count orders, calculate total amount, compute average commission',
-      'Find pairs of customers sharing matching ratings without duplicates',
-      'Subqueries and JOINs to correlate customers with salesmen across same cities',
-      'Complex UNION queries with rating thresholds and custom computed labels (\'HIGH RATING\', \'LOW RATING\')'
-    ]
-  },
 
   // ==========================================
-  // SEMESTER 3 (Official RGPV Syllabus)
+  // SEMESTER 3 (Strict Core Theory Subjects)
   // ==========================================
   {
     id: 'mca-301',
     code: 'MCA 301',
+    name: 'Python',
+    semester: 3,
+    isElective: false,
+    description: 'Python fundamentals, control flow, functions, lists, tuples, dictionaries, object-oriented programming, classes, file I/O, and modules.',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
+    books: [
+      'Reema Thareja, "Python Programming using Problem Solving Approach", Oxford University Press, 2017',
+      'Allen B. Downey, "Think Python: How to Think Like a Computer Scientist", 2nd Ed, O\'Reilly',
+      'Guido van Rossum, Fred L. Drake Jr., "An Introduction to Python", Network Theory Ltd.'
+    ],
+    units: [
+      {
+        unitNumber: 1,
+        title: 'Introduction to Python',
+        topics: [
+          'Python interpreter and interactive mode',
+          'Values and types: int, float, boolean, string, list',
+          'Variables, expressions, statements, tuple assignment, precedence, comments',
+          'Modules and functions, function definition and use, flow of execution',
+          'Parameters and arguments, illustrative numerical programs'
+        ]
+      },
+      {
+        unitNumber: 2,
+        title: 'Control Flow, Functions & Strings',
+        topics: [
+          'Conditionals: if, if-else, chained conditional (if-elif-else)',
+          'Iteration: while, for, break, continue, pass',
+          'Fruitful functions: return values, parameters, local/global scope, recursion',
+          'Strings: slices, immutability, string functions and methods',
+          'Lists as arrays, searching and sorting algorithms'
+        ]
+      },
+      {
+        unitNumber: 3,
+        title: 'Lists, Tuples & Dictionaries',
+        topics: [
+          'List operations, slices, methods, loop, mutability, aliasing, cloning',
+          'Tuples: assignment, tuple as return value',
+          'Dictionaries: operations and methods',
+          'Advanced list processing: list comprehensions',
+          'Illustrative sorting and searching programs'
+        ]
+      },
+      {
+        unitNumber: 4,
+        title: 'Classes and Inheritance (OOP)',
+        topics: [
+          'Object Oriented Programming concepts in Python',
+          'Class Instances, Methods, Classes examples',
+          'Hierarchies: Your Own Types, Building a Class',
+          'Visualizing the Hierarchy, Adding another Class, Using Inherited Methods'
+        ]
+      },
+      {
+        unitNumber: 5,
+        title: 'Files, Modules & Packages',
+        topics: [
+          'Files and exceptions: text files, reading and writing files, format operator',
+          'Command line arguments',
+          'Errors and exceptions handling, try-except blocks',
+          'Modules, packages, illustrative file programs (word count, copy file)'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'mca-302',
+    code: 'MCA 302',
+    name: 'Distributed System',
+    semester: 3,
+    isElective: false,
+    description: 'Distributed systems architectures, RPC, clock synchronization, election algorithms, fault tolerance, replication, CORBA, and distributed shared memory.',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
+    books: [
+      'Andrew S. Tanenbaum, Maarten Van Steen, "Distributed Systems Principles and Paradigms", Pearson',
+      'George Coulouris, "Distributed Systems: Design and Concepts", Pearson Education',
+      'Harry Singh, "Progressing to Distributed Multiprocessing", Prentice-Hall'
+    ],
+    units: [
+      {
+        unitNumber: 1,
+        title: 'Introduction & Communication in Distributed Systems',
+        topics: [
+          'Goals of Distributed Systems, Hardware and Software concepts',
+          'Client-server model',
+          'Remote Procedure Call (RPC), Remote Object Invocation (RMI)',
+          'Message-oriented communication, Stream-oriented communication'
+        ]
+      },
+      {
+        unitNumber: 2,
+        title: 'Synchronization & Clock Synchronization',
+        topics: [
+          'Clock Synchronization: physical clocks, logical clocks (Lamport timestamps)',
+          'Vector clocks',
+          'Mutual Exclusion algorithms: centralized, distributed, token ring',
+          'Election algorithms: Bully algorithm, Ring algorithm'
+        ]
+      },
+      {
+        unitNumber: 3,
+        title: 'Fault Tolerance & Distributed Consensus',
+        topics: [
+          'Basic concepts of fault tolerance, failure models',
+          'Process resilience, reliable client-server communication',
+          'Reliable group communication, distributed commit protocols (Two-Phase Commit)',
+          'Recovery mechanisms: checkpointing and message logging'
+        ]
+      },
+      {
+        unitNumber: 4,
+        title: 'Distributed Shared Memory & Replication',
+        topics: [
+          'Consistency models: strict, sequential, causal, eventual consistency',
+          'Replica management, consistency protocols',
+          'Distributed Shared Memory (DSM) architecture, implementation issues',
+          'Page-based distributed shared memory'
+        ]
+      },
+      {
+        unitNumber: 5,
+        title: 'Case Studies: CORBA, Mach & Distributed File Systems',
+        topics: [
+          'CORBA architecture and Object Request Broker (ORB)',
+          'Distributed File Systems: Sun Network File System (NFS), Coda',
+          'Mach operating system case study',
+          'Security in distributed systems: authentication, Kerberos, secure channels'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'mca-303',
+    code: 'MCA 303',
+    name: 'Internet of Things (IoT)',
+    semester: 3,
+    isElective: false,
+    description: 'IoT conceptual framework, M2M, web connectivity protocols (REST, WebSockets), sensor technology, RFID, Raspberry Pi, Arduino, and smart city implementations.',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
+    books: [
+      'Rajkamal, "Internet of Things", Tata McGraw Hill',
+      'Vijay Madisetti and Arshdeep Bahga, "Internet of Things (A Hands-on-Approach)", Universal Press',
+      'Hakima Chaouchi, "The Internet of Things: Connecting Objects", Wiley'
+    ],
+    units: [
+      {
+        unitNumber: 1,
+        title: 'IoT Architecture & Design',
+        topics: [
+          'Definition and Characteristics of IoT',
+          'IoT Conceptual framework, Architectural view',
+          'Physical design of IoT, Logical design of IoT',
+          'Applications of IoT across industries'
+        ]
+      },
+      {
+        unitNumber: 2,
+        title: 'M2M, SDN & Cloud Services',
+        topics: [
+          'Machine-to-Machine (M2M) communication',
+          'Software Defined Networking (SDN) and Network Function Virtualization (NFV) for IoT',
+          'Data storage in IoT',
+          'IoT Cloud-Based Services'
+        ]
+      },
+      {
+        unitNumber: 3,
+        title: 'Web Connectivity Principles & Protocols',
+        topics: [
+          'Communication protocols for connected devices: SOAP, REST, HTTP',
+          'Message Communication protocols: RESTful and WebSockets',
+          'Internet connectivity principles, IP addressing in IoT',
+          'Media Access Control in IoT'
+        ]
+      },
+      {
+        unitNumber: 4,
+        title: 'Sensors, Actuators & Wireless Networks',
+        topics: [
+          'Sensor Technology, Participatory Sensing',
+          'Industrial IoT and Automotive IoT, Actuators',
+          'Sensor data Communication Protocols',
+          'Radio Frequency Identification (RFID) Technology, Wireless Sensor Networks (WSN)'
+        ]
+      },
+      {
+        unitNumber: 5,
+        title: 'Design Methodology & Embedded Devices',
+        topics: [
+          'Specification, process, model, service, and operational views',
+          'IoT Privacy and security solutions',
+          'Raspberry Pi and Arduino device integrations',
+          'Case study: Smart city streetlights control and monitoring'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'mca-304',
+    code: 'MCA 304',
+    name: 'Artificial Intelligence',
+    semester: 3,
+    isElective: false,
+    description: 'AI problems, LISP programming, heuristic search (A*, AO*), knowledge representation, predicate calculus, NLP, Minimax game playing, and expert systems.',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
+    books: [
+      'Elaine Rich and Kevin Knight, "Artificial Intelligence", Tata McGraw Hill',
+      'Dan W. Patterson, "Introduction to Artificial Intelligence and Expert Systems", Prentice India',
+      'Nils J. Nilsson, "Principles of Artificial Intelligence", Narosa Publishing House',
+      'Clocksin & C.S. Mellish, "Programming in PROLOG", Narosa Publishing House'
+    ],
+    units: [
+      {
+        unitNumber: 1,
+        title: 'Overview of AI & LISP Programming',
+        topics: [
+          'The AI problems, AI techniques, Characteristics of AI applications',
+          'Introduction to LISP programming: Syntax and numeric functions',
+          'Basic list manipulation functions, predicates and conditionals',
+          'Input output and local variables, iteration and recursion',
+          'Property lists and arrays'
+        ]
+      },
+      {
+        unitNumber: 2,
+        title: 'Problem Solving & Heuristic Search Strategies',
+        topics: [
+          'General problem solving, production systems, forward and backward chaining',
+          'Exhaustive searches: Depth First Search, Breadth First Search',
+          'Heuristic Search Techniques: Hill Climbing, Branch and Bound',
+          'Best First Search & A* algorithm, AND/OR graphs, AO* algorithm',
+          'Constraint satisfaction problems'
+        ]
+      },
+      {
+        unitNumber: 3,
+        title: 'Knowledge Representations',
+        topics: [
+          'First order predicate calculus, skolemization',
+          'Resolution principle & unification, interface mechanisms',
+          'Horn\'s clauses, semantic networks',
+          'Frame systems and value inheritance, scripts, conceptual dependency'
+        ]
+      },
+      {
+        unitNumber: 4,
+        title: 'Natural Language Processing & Game Playing',
+        topics: [
+          'Parsing techniques, context free grammars, recursive transition nets (RTN)',
+          'Augmented transition nets (ATN), case and logic grammars, semantic analysis',
+          'Game playing: Minimax search procedure, alpha-beta cutoffs',
+          'Planning: Blocks world domain, components of planning systems',
+          'Goal stack planning, non-linear planning'
+        ]
+      },
+      {
+        unitNumber: 5,
+        title: 'Uncertainty, Expert Systems & Machine Learning',
+        topics: [
+          'Probabilistic Reasoning: Probability theory, Bayes theorem, Bayesian networks, Certainty factors',
+          'Expert Systems: Introduction, applications, shells, knowledge acquisition',
+          'Case study: MYCIN system',
+          'Learning: Rote learning, learning by induction, explanation-based learning'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'mca-305',
+    code: 'MCA 305',
     name: 'Data Mining',
     semester: 3,
     isElective: false,
@@ -1005,1345 +1176,69 @@ export const SUBJECTS: Subject[] = [
       }
     ]
   },
-  {
-    id: 'mca-302',
-    code: 'MCA 302',
-    name: 'Artificial Intelligence',
-    semester: 3,
-    isElective: false,
-    description: 'AI problems, LISP programming, heuristic search (A*, AO*), knowledge representation, predicate calculus, NLP, Minimax game playing, and expert systems.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Elaine Rich and Kevin Knight, "Artificial Intelligence", Tata McGraw Hill',
-      'Dan W. Patterson, "Introduction to Artificial Intelligence and Expert Systems", Prentice India',
-      'Nils J. Nilsson, "Principles of Artificial Intelligence", Narosa Publishing House',
-      'Clocksin & C.S. Mellish, "Programming in PROLOG", Narosa Publishing House'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Overview of AI & LISP Programming',
-        topics: [
-          'The AI problems, AI techniques, Characteristics of AI applications',
-          'Introduction to LISP programming: Syntax and numeric functions',
-          'Basic list manipulation functions, predicates and conditionals',
-          'Input output and local variables, iteration and recursion',
-          'Property lists and arrays'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Problem Solving & Heuristic Search Strategies',
-        topics: [
-          'General problem solving, production systems, forward and backward chaining',
-          'Exhaustive searches: Depth First Search, Breadth First Search',
-          'Heuristic Search Techniques: Hill Climbing, Branch and Bound',
-          'Best First Search & A* algorithm, AND/OR graphs, AO* algorithm',
-          'Constraint satisfaction problems'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Knowledge Representations',
-        topics: [
-          'First order predicate calculus, skolemization',
-          'Resolution principle & unification, interface mechanisms',
-          'Horn\'s clauses, semantic networks',
-          'Frame systems and value inheritance, scripts, conceptual dependency'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Natural Language Processing & Game Playing',
-        topics: [
-          'Parsing techniques, context free grammars, recursive transition nets (RTN)',
-          'Augmented transition nets (ATN), case and logic grammars, semantic analysis',
-          'Game playing: Minimax search procedure, alpha-beta cutoffs',
-          'Planning: Blocks world domain, components of planning systems',
-          'Goal stack planning, non-linear planning'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Uncertainty, Expert Systems & Machine Learning',
-        topics: [
-          'Probabilistic Reasoning: Probability theory, Bayes theorem, Bayesian networks, Certainty factors',
-          'Expert Systems: Introduction, applications, shells, knowledge acquisition',
-          'Case study: MYCIN system',
-          'Learning: Rote learning, learning by induction, explanation-based learning'
-        ]
-      }
-    ]
-  },
-  // Elective – I Group (Sem 3)
-  {
-    id: 'mca-303-1',
-    code: 'MCA 303 (1)',
-    name: 'Python Programming',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – I',
-    description: 'Python fundamentals, control flow, functions, lists, tuples, dictionaries, object-oriented programming, classes, file I/O, and modules.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Reema Thareja, "Python Programming using Problem Solving Approach", Oxford University Press, 2017',
-      'Allen B. Downey, "Think Python: How to Think Like a Computer Scientist", 2nd Ed, O\'Reilly',
-      'Guido van Rossum, Fred L. Drake Jr., "An Introduction to Python", Network Theory Ltd.'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Introduction to Python',
-        topics: [
-          'Python interpreter and interactive mode',
-          'Values and types: int, float, boolean, string, list',
-          'Variables, expressions, statements, tuple assignment, precedence, comments',
-          'Modules and functions, function definition and use, flow of execution',
-          'Parameters and arguments, illustrative numerical programs'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Control Flow, Functions & Strings',
-        topics: [
-          'Conditionals: if, if-else, chained conditional (if-elif-else)',
-          'Iteration: while, for, break, continue, pass',
-          'Fruitful functions: return values, parameters, local/global scope, recursion',
-          'Strings: slices, immutability, string functions and methods',
-          'Lists as arrays, searching and sorting algorithms'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Lists, Tuples & Dictionaries',
-        topics: [
-          'List operations, slices, methods, loop, mutability, aliasing, cloning',
-          'Tuples: assignment, tuple as return value',
-          'Dictionaries: operations and methods',
-          'Advanced list processing: list comprehensions',
-          'Illustrative sorting and searching programs'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Classes and Inheritance (OOP)',
-        topics: [
-          'Object Oriented Programming concepts in Python',
-          'Class Instances, Methods, Classes examples',
-          'Hierarchies: Your Own Types, Building a Class',
-          'Visualizing the Hierarchy, Adding another Class, Using Inherited Methods'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Files, Modules & Packages',
-        topics: [
-          'Files and exceptions: text files, reading and writing files, format operator',
-          'Command line arguments',
-          'Errors and exceptions handling, try-except blocks',
-          'Modules, packages, illustrative file programs (word count, copy file)'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-303-2',
-    code: 'MCA 303 (2)',
-    name: 'Web Technology',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – I',
-    description: 'Client-server Internet architecture, HTML5, CSS positioning, JavaScript DOM manipulation, XML/XSLT transformations, AJAX, and Web Services.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Jeffrey C. Jackson, "Web Technologies - A Computer Science Perspective", Pearson Education',
-      'Ralph Moseley and M. T. Savaliya, "Developing Web Applications", Wiley-India',
-      'P.J. Deitel & H.M. Deitel, "Internet and World Wide Web How to program", Pearson'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Internet Concepts & Web Design Principles',
-        topics: [
-          'Client/Server model, Internet and WWW, IP, URL, ISP, DNS',
-          'Principles of effective Web Design, Page layout and linking',
-          'Designing effective navigation for websites',
-          'Planning and publishing websites',
-          'Responsive web design: Responsive vs adaptive design'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'HTML & Cascading Style Sheets (CSS)',
-        topics: [
-          'Working with HTML: formatting, tags, hyperlinks, tables, images, forms, XHTML',
-          'Style Sheets (CSS): introduction, basic syntax and structure',
-          'Class, ID, background images, colors and properties',
-          'Manipulating text, margins, positioning, box model'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Client-Side Scripting with JavaScript',
-        topics: [
-          'JavaScript data types and variables, expressions, operators',
-          'Control statements, objects and arrays, functions, loops',
-          'Classes, modules, Document Object Model (DOM)',
-          'Form handling and client-side validation'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'XML, DTD, Schema & XSLT',
-        topics: [
-          'XML: introduction, features, anatomy, declaration, key components',
-          'DTD and Schema, markup elements and attributes, XML objects',
-          'XML scripting, using XML with applications',
-          'Transforming XML using XSL and XSLT, XPath template-based transformations'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'AJAX & Web Services Architecture',
-        topics: [
-          'Introduction to AJAX, AJAX components, XMLHttpRequest object',
-          'Using XSLT with AJAX',
-          'Web Services architecture, introduction to web services',
-          'Web Services vs other technologies, Web Services benefits (SOAP, WSDL)'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-303-3',
-    code: 'MCA 303 (3)',
-    name: 'Introduction to Data Science and Big Data',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – I',
-    description: 'Data science lifecycle, statistical inference, R data analysis, NoSQL databases (MongoDB, HBase), Hadoop ecosystem, MapReduce, and stream analytics.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Bill Franks, "Taming the Big Data Tidal Wave", John Wiley & Sons',
-      'Rachel Schutt, Cathy O\'Neil, "Doing Data Science", O\'Reilly'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Introduction to Data Science & Big Data',
-        topics: [
-          'Data Science Process, Exploratory Data Analysis',
-          'Big Data: Definition, Risks, Structure of Big Data',
-          'Evolution of Analytic Scalability, Analytic Processes and Tools',
-          'Core Analytics vs Advanced Analytics, Modern data analytic tools',
-          'Statistical concepts: sampling distributions, re-sampling, statistical inference, data visualization'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Data Analysis Using R',
-        topics: [
-          'Univariate Analysis: Frequency, Mean, Median, Mode, Variance, SD, Skewness, Kurtosis',
-          'Bivariate Analysis: Correlation, Regression Modeling (Linear and Logistic)',
-          'Multivariate Analysis',
-          'Graphical representations in R: Bar plot, Histogram, Box plot, Scatter plot, Lattice plot'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Data Modeling & NoSQL',
-        topics: [
-          'Bayesian Modeling, Support Vector and Kernel Methods, Neuro-Fuzzy Modeling',
-          'Principal Component Analysis (PCA)',
-          'Introduction to NoSQL: CAP Theorem',
-          'MongoDB: RDBMS vs MongoDB, database model, data types and sharding',
-          'Data modeling in HBase: defining schema, CRUD operations'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Data Analytical Frameworks & Hadoop',
-        topics: [
-          'Introduction to Hadoop: Hadoop Overview, RDBMS vs Hadoop',
-          'HDFS: components and block replication',
-          'Introduction to MapReduce, running algorithms using MapReduce',
-          'HBase architecture: HLog and HFile, data replication',
-          'Introduction to Hive, Spark, and Apache Sqoop'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Stream Analytics',
-        topics: [
-          'Introduction to Streams concepts, Stream Data Model and Architecture',
-          'Stream Computing, sampling data in a stream, filtering streams',
-          'Counting distinct elements in a stream, estimating moments',
-          'Counting oneness in a window, decaying window algorithms'
-        ]
-      }
-    ]
-  },
-  // Elective – II Group (Sem 3)
-  {
-    id: 'mca-304-1',
-    code: 'MCA 304 (1)',
-    name: 'Machine Learning',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – II',
-    description: 'Supervised and unsupervised learning, backpropagation, CNN architectures, RNN/LSTM, reinforcement learning (MDP, Q-learning), and Support Vector Machines.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Christopher M. Bishop, "Pattern Recognition and Machine Learning", Springer, 2011',
-      'Tom M. Mitchell, "Machine Learning", McGraw Hill Education, 2017',
-      'Ian Goodfellow, Yoshua Bengio, Aaron Courville, "Deep Learning", MIT Press, 2016'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Machine Learning Foundations',
-        topics: [
-          'Scope and limitations of machine learning',
-          'Linear algebra, probability, statistics, convex optimization',
-          'Hypothesis function and testing, data distributions, data augmentation',
-          'Normalizing datasets, supervised and unsupervised learning overview'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Neural Networks & Optimization',
-        topics: [
-          'Linearity vs non-linearity, activation functions (Sigmoid, ReLU)',
-          'Weights and bias, loss functions, gradient descent',
-          'Multilayer network, backpropagation, weight initialization',
-          'Batch normalization, dropout, L1 and L2 regularization, tuning hyperparameters'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Convolutional Neural Networks (CNN)',
-        topics: [
-          'Flattening, subsampling, padding, stride, convolution layers, pooling layers',
-          '1x1 convolutions, Inception network, input channels',
-          'Transfer learning, one shot learning, dimension reductions',
-          'Implementation of CNN in TensorFlow and Keras'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Recurrent Networks & Reinforcement Learning',
-        topics: [
-          'Recurrent Neural Network (RNN), LSTM, Gated Recurrent Unit (GRU)',
-          'Sequence modeling, attention models, BLEU score',
-          'Reinforcement Learning framework, Markov Decision Processes (MDP)',
-          'Bellman equations, Value & Policy Iteration, Q-learning, SARSA'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'SVM, Bayesian Learning & Applications',
-        topics: [
-          'Support Vector Machines (SVM), kernel trick',
-          'Bayesian learning',
-          'Applications in computer vision, speech processing, and NLP',
-          'Case study: ImageNet competition'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-304-2',
-    code: 'MCA 304 (2)',
-    name: 'Soft Computing',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – II',
-    description: 'Artificial neural networks, Perceptrons, backpropagation, Kohonen Self-Organizing Maps, Fuzzy Logic controllers, and Genetic Algorithms.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'R. Rajasekaran and G. A. Vijayalakshmi Pai, "Neural Networks, Fuzzy Logic, and Genetic Algorithms", PHI',
-      'D. E. Goldberg, "Genetic Algorithms in Search, Optimisation, and Machine Learning", Addison-Wesley'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Overview of Soft Computing & Early ANN',
-        topics: [
-          'Difference between Soft and Hard computing',
-          'Components: AI systems, Neural networks, Fuzzy logic, Genetic algorithms',
-          'Biological vs Artificial neural networks, ANN architecture, activation functions',
-          'Early architectures: McCulloch-Pitts model, Perceptron, ADALINE, MADALINE'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Supervised Neural Network Learning',
-        topics: [
-          'Neuron as a computing element, Perceptron learning',
-          'Backpropagation networks: architecture, learning rule, accelerated learning',
-          'Hopfield network, Bidirectional Associative Memories (BAM)',
-          'Radial Basis Function (RBF) Neural Networks'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Unsupervised Learning Networks',
-        topics: [
-          'Hebbian Learning, Generalized Hebbian learning algorithm',
-          'Competitive learning',
-          'Self-Organizing Computational Maps: Kohonen Network'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Fuzzy Logic & Controllers',
-        topics: [
-          'Crisp sets vs Fuzzy sets',
-          'Fuzzy relations, fuzzy conditional statements, fuzzy rules',
-          'Fuzzy algorithms, defuzzification methods',
-          'Fuzzy logic controller design'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Genetic Algorithms (GA)',
-        topics: [
-          'Basic concepts, chromosome encoding, fitness functions',
-          'Reproduction: Roulette wheel, Boltzmann, tournament, rank selection',
-          'Crossover and mutation operators',
-          'Convergence of GA, case study applications, genetic programming basics'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-304-3',
-    code: 'MCA 304 (3)',
-    name: 'Internet of Things',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – II',
-    description: 'IoT conceptual framework, M2M, web connectivity protocols (REST, WebSockets), sensor technology, RFID, Raspberry Pi, Arduino, and smart city implementations.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Rajkamal, "Internet of Things", Tata McGraw Hill',
-      'Vijay Madisetti and Arshdeep Bahga, "Internet of Things (A Hands-on-Approach)", Universal Press',
-      'Hakima Chaouchi, "The Internet of Things: Connecting Objects", Wiley'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'IoT Architecture & Design',
-        topics: [
-          'Definition and Characteristics of IoT',
-          'IoT Conceptual framework, Architectural view',
-          'Physical design of IoT, Logical design of IoT',
-          'Applications of IoT across industries'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'M2M, SDN & Cloud Services',
-        topics: [
-          'Machine-to-Machine (M2M) communication',
-          'Software Defined Networking (SDN) and Network Function Virtualization (NFV) for IoT',
-          'Data storage in IoT',
-          'IoT Cloud-Based Services'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Web Connectivity Principles & Protocols',
-        topics: [
-          'Communication protocols for connected devices: SOAP, REST, HTTP',
-          'Message Communication protocols: RESTful and WebSockets',
-          'Internet connectivity principles, IP addressing in IoT',
-          'Media Access Control in IoT'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Sensors, Actuators & Wireless Networks',
-        topics: [
-          'Sensor Technology, Participatory Sensing',
-          'Industrial IoT and Automotive IoT, Actuators',
-          'Sensor data Communication Protocols',
-          'Radio Frequency Identification (RFID) Technology, Wireless Sensor Networks (WSN)'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Design Methodology & Embedded Devices',
-        topics: [
-          'Specification, process, model, service, and operational views',
-          'IoT Privacy and security solutions',
-          'Raspberry Pi and Arduino device integrations',
-          'Case study: Smart city streetlights control and monitoring'
-        ]
-      }
-    ]
-  },
-  // Elective – III Group (Sem 3)
-  {
-    id: 'mca-305-1',
-    code: 'MCA 305 (1)',
-    name: 'Computer Ethics',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – III',
-    description: 'Ethics in IT organizations, computer crime, intellectual property, software product liability, privacy legislation, and social networking responsibilities.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'George W. Reynolds, "Ethics in Information Technology", 3rd Edition, Cengage Learning',
-      'Deborah Johnson, "Computer Ethics", 4th Edition',
-      'Richard Spinello and Herman Tavani, "CyberEthics", 2nd Edition'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Overview of Ethics in Information Technology',
-        topics: [
-          'Definition of Ethics, Integrity, Difference between Morals, Ethics, and Laws',
-          'Ethics in Business, Corporate ethics, Ethical work environment',
-          'Ethics for IT Workers: professional codes of ethics, certification, licensing',
-          'IT professional malpractice, Common ethical issues for IT users'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Computer Crime, Security & Information Privacy',
-        topics: [
-          'Types of computer exploits and perpetrators, Federal laws for cyber prosecution',
-          'Implementing trustworthy computing, security policies, incident response',
-          'Privacy protection and laws, Identity theft, Consumer profiling',
-          'Workplace monitoring and surveillance technology'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Freedom of Expression & Intellectual Property',
-        topics: [
-          'First Amendment rights, defamation, corporate blogging, anonymous speech',
-          'Intellectual property: Copyrights, Fair Use Doctrine, DMCA 1998, WIPO',
-          'Patents: software patents, cross-licensing, patent trolls',
-          'Trade Secrets, Plagiarism, Reverse engineering, Cybersquatting'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Software Development Liability & Impact of IT',
-        topics: [
-          'Strategies for engineering quality software, Software product liability',
-          'CMMI levels, Safety-critical systems, Quality management standards',
-          'Impact of IT on productivity and quality of life, Digital divide',
-          'IT in Healthcare, Electronic health records, Telemedicine'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Social Networking & IT Organization Ethics',
-        topics: [
-          'Social networking business applications, Advertising, Hiring risks',
-          'Cyberbullying, Cyberstalking, Virtual worlds',
-          'Contingent workers, Outsourcing and offshore strategies',
-          'Whistle-blowing protection, Green computing, ICT codes of conduct'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-305-2',
-    code: 'MCA 305 (2)',
-    name: 'Advanced DBMS',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – III',
-    description: 'Object-relational databases, deductive databases, parallel & distributed databases, multi-level transactions, active ECA rules, and multimedia spatial databases.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Elmasri, "Fundamentals of Database Systems", 4th Edition, Pearson',
-      'R. Ramakrishnan, "Database Management Systems", McGraw Hill',
-      'Elmagarmid A.K., "Database transaction models for advanced applications"'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Object Oriented & Object Relational Databases',
-        topics: [
-          'Modeling complex data semantics, Specialization, Generalization, Aggregation',
-          'Objects, Object Identity, Clustering, Equality and Reference',
-          'Architecture of Object-Oriented and Object-Relational databases',
-          'Persistent programming languages, Cache coherence',
-          'Case studies: Gemstone, O2, SQL3, Oracle xxi, DB2'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Deductive, Parallel & Distributed Databases',
-        topics: [
-          'Datalog and recursion, Evaluation of Datalog programs, Recursive queries',
-          'Parallel architectures: shared nothing, shared disk, shared memory, pipelining',
-          'Distributed Data Storage: Fragmentation, Replication, Transparency',
-          'Distributed query optimization, Distributed transaction modeling & deadlocks, Commit protocols'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Advanced Transaction Processing',
-        topics: [
-          'Savepoints, Nested and Multilevel Transactions',
-          'Compensating transactions and Sagas',
-          'Long duration transactions, Weak levels of consistency',
-          'Transaction workflows, Transaction Processing Monitors'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Active & Real-Time Databases',
-        topics: [
-          'Triggers in SQL, Event-Condition-Action (ECA) rules',
-          'Query processing and concurrency control in active databases',
-          'Recursive query processing, Compensation and Database recovery, Multi-level recovery'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Image, Multimedia & Web Databases',
-        topics: [
-          'Modeling and storage of Image and Multimedia data',
-          'Spatial Data Structures: R-tree, k-d tree, Quad trees',
-          'Content-Based Retrieval (CBIR): color histograms, textures, image features',
-          'Audio and video data models, Geographic Information Systems (GIS)',
-          'Web databases, XML databases, Commercial systems (Oracle, DB2)'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-305-3',
-    code: 'MCA 305 (3)',
-    name: 'Distributed Systems',
-    semester: 3,
-    isElective: true,
-    electiveGroup: 'Elective – III',
-    description: 'Distributed systems architectures, RPC, clock synchronization, election algorithms, fault tolerance, replication, CORBA, and distributed shared memory.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-3_8353c851.pdf',
-    books: [
-      'Andrew S. Tanenbaum, Maarten Van Steen, "Distributed Systems Principles and Paradigms", Pearson',
-      'George Coulouris, "Distributed Systems: Design and Concepts", Pearson Education',
-      'Harry Singh, "Progressing to Distributed Multiprocessing", Prentice-Hall'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Introduction & Communication in Distributed Systems',
-        topics: [
-          'Goals of Distributed Systems, Hardware and Software concepts',
-          'Client-server model',
-          'Remote Procedure Call (RPC), Remote Object Invocation (RMI)',
-          'Message and stream oriented communications'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Processes & Synchronization',
-        topics: [
-          'Threads, Clients, Servers, Code migration',
-          'Clock synchronization algorithms (Lamport timestamps)',
-          'Mutual exclusion in distributed systems',
-          'Election algorithms: Bully and Ring algorithms',
-          'Distributed transactions'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Consistency, Replication & Fault Tolerance',
-        topics: [
-          'Object replication, Data-centric consistency models',
-          'Client-centric consistency models',
-          'Fault tolerance, Process resilience, Distributed recovery',
-          'Distributed security architecture, Kerberos, SSL/TLS, Cryptography'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Distributed Object-Based & File Systems',
-        topics: [
-          'CORBA, Distributed COM',
-          'Goals and design issues of Distributed File Systems',
-          'Types of distributed file systems',
-          'Sun Network File System (NFS)'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Distributed Shared Memory & Coordination',
-        topics: [
-          'Distributed Shared Memory (DSM) servers, consistency models',
-          'Distributed document-based systems: World Wide Web',
-          'Coordination-based systems: JINI implementation, Java RMI',
-          'ActiveX, Orbix, Object-oriented programming with SOM'
-        ]
-      }
-    ]
-  },
 
   // ==========================================
-  // SEMESTER 4 (Official RGPV Syllabus)
+  // SEMESTER 4 (Provisional Advanced Continuation Structure)
   // ==========================================
-  // Elective – IV Group (Sem 4)
   {
-    id: 'mca-401-1',
-    code: 'MCA 401 (1)',
+    id: 'mca-401',
+    code: 'MCA 401',
     name: 'Advanced Python',
     semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – IV',
-    description: 'Advanced Python OOP, iterators, generators, decorators, file streams, SQLite database access, Tkinter GUI, NumPy, Pandas, Matplotlib, and Scikit-Learn.',
+    isElective: false,
+    isProvisional: true,
+    description: 'Provisional advanced learning track based on Python. Official university syllabus units and resources will be updated once confirmed by the university.',
     syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Michael Urban and Joel Murach, "Python Programming", Shroff/Murach, 2016',
-      'Mark Lutz, "Programming Python", O\'Reilly, 4th Edition, 2010'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Advanced Python Coding Foundations',
-        topics: [
-          'Introduction to Python, IDE development, coding skills',
-          'Numeric, string, and list operations, Python functions',
-          'Boolean expressions, selection & iteration structures',
-          'Working with lists of lists, tuples, dates and times, dictionaries'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'OOP, Custom Exceptions & Decorators',
-        topics: [
-          'Classes, objects, constructors, data hiding, instance methods',
-          'Class variables, inheritance, polymorphism, type identification',
-          'Custom Exception Classes, error propagation',
-          'Iterators, Generators, and Decorators in Python'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'I/O Streams & Directory Management',
-        topics: [
-          'Data streams, creating custom data streams, access modes',
-          'File reading and writing, additional file methods',
-          'Handling IO exceptions, exception hierarchy, handling multiple exceptions',
-          'Working with Directories and OS file interfaces'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Relational Databases & GUI Development',
-        topics: [
-          'SQL statements for data manipulation in Python',
-          'SQLite database programming, database cursors and commits',
-          'Creating a GUI with event handling, component design (Tkinter)'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Data Science Libraries & Machine Learning',
-        topics: [
-          'NumPy for numerical multi-dimensional arrays',
-          'Pandas for data structures, cleaning, and analysis',
-          'Matplotlib and Seaborn for statistical plotting',
-          'Interactive dynamic visualizations',
-          'Scikit-Learn implementation of machine learning algorithms'
-        ]
-      }
-    ]
+    books: ['Mark Lutz, "Programming Python", O\'Reilly'],
+    units: []
   },
   {
-    id: 'mca-401-2',
-    code: 'MCA 401 (2)',
-    name: 'Advanced Web Technology',
+    id: 'mca-402',
+    code: 'MCA 402',
+    name: 'Advanced Distributed Systems',
     semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – IV',
-    description: 'Bootstrap responsive design, XML validation, XSLT, AJAX with PHP backend, RESTful web services consumption, jQuery DOM selectors, and event handling.',
+    isElective: false,
+    isProvisional: true,
+    description: 'Provisional advanced learning track based on Distributed Systems. Official university syllabus units and resources will be updated once confirmed by the university.',
     syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Ivan Bayross and Sharanam Shah, "AJAX For Beginners", SPD',
-      'Richard York, "Web Development with jQuery", Wrox',
-      'Robin Nixon, "Learning PHP, MySQL & JavaScript with jQuery, CSS & HTML5", SPD',
-      'Dave Crane, Eric Pascarello, "Ajax in Action"'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Responsive Design & Bootstrap Grid',
-        topics: [
-          'Responsive web design principles',
-          'Introduction to Bootstrap framework',
-          'Bootstrap 12-column grid system',
-          'Bootstrap UI components and interactive plugins'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'XML, DTD, Schema & XSLT Transformation',
-        topics: [
-          'XML compared with HTML, Structure of XML documents',
-          'Declarations, Elements, Attributes, CDATA, XML Entity references',
-          'Parsers, Document Type Definitions (DTD), XML Schema',
-          'Using XSLT with XML: templates, apply-templates, import, include, value-of, sorting'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'AJAX Web Application Model & PHP Integration',
-        topics: [
-          'AJAX web application model, XMLHttpRequest object lifecycle',
-          'Synchronous vs Asynchronous data transfers',
-          'Cross-browser AJAX implementations',
-          'Integrating PHP and AJAX: sending and receiving data',
-          'Field validation using AJAX and PHP'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'XML Processing, Database Queries & Web Services',
-        topics: [
-          'Handling XML data using PHP and JavaScript DOM methods',
-          'Extracting node values and attributes in XML',
-          'Validating XML documents in AJAX applications',
-          'Retrieving database records via PHP and AJAX',
-          'Consuming Web Services using AJAX (SOAP, WSDL, UDDI, REST)'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'jQuery Library, DOM Traversals & Effects',
-        topics: [
-          'JavaScript DOM objects: Window, History, Location, Document, Form',
-          'jQuery fundamentals, loading and utilizing library files',
-          'Callback functions, jQuery selectors, accessing HTML attributes',
-          'DOM traversing, manipulators, events, effects, jQuery with AJAX'
-        ]
-      }
-    ]
+    books: ['Andrew S. Tanenbaum, "Distributed Systems: Principles and Paradigms", Pearson'],
+    units: []
   },
   {
-    id: 'mca-401-3',
-    code: 'MCA 401 (3)',
-    name: 'Big Data Analytics',
+    id: 'mca-403',
+    code: 'MCA 403',
+    name: 'Advanced IoT',
     semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – IV',
-    description: 'HDFS, MapReduce, YARN, K-means clustering, Decision Trees, Apriori recommendation systems, real-time stream sentiment analytics, and NoSQL databases.',
+    isElective: false,
+    isProvisional: true,
+    description: 'Provisional advanced learning track based on Internet of Things. Official university syllabus units and resources will be updated once confirmed by the university.',
     syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Anand Rajaraman and Jeffrey David Ullman, "Mining of Massive Datasets", Cambridge University Press',
-      'David Loshin, "Big Data Analytics", Morgan Kaufmann, 2013',
-      'EMC Education Services, "Data Science and Big Data Analytics", Wiley, 2015'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Introduction to Big Data & HDFS Architecture',
-        topics: [
-          'Evolution and characteristics of Big Data (Volume, Velocity, Variety)',
-          'Big Data use cases and business value quantification',
-          'High-performance storage architecture',
-          'Hadoop Distributed File System (HDFS), MapReduce and YARN programming model'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Clustering & Classification in R',
-        topics: [
-          'Clustering overview: K-means algorithm, choosing cluster count, diagnostics',
-          'Classification: Decision Trees overview and algorithms',
-          'Evaluating Decision Trees, implementing in R',
-          'Naïve Bayes theorem and Naïve Bayes Classifier'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Association & Recommendation Systems',
-        topics: [
-          'Association Rules: Apriori algorithm, candidate rule evaluation',
-          'Finding associations and similarity',
-          'Recommendation Systems: Collaborative filtering, Content-based recommendations',
-          'Knowledge-based recommendations, Hybrid recommendation approaches'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Stream Memory & Real-Time Analytics',
-        topics: [
-          'Stream Data Model, stream computing, sampling and filtering streams',
-          'Counting distinct elements in a stream, Estimating moments',
-          'Real Time Analytics Platform (RTAP), Sentiment analysis, Stock predictions',
-          'Graph Analytics for Big Data'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'NoSQL Data Management & Visualization',
-        topics: [
-          'NoSQL schema-less models: Key-Value, Document, Tabular, Object data stores',
-          'Graph databases, Apache Hive, Sharding, HBase',
-          'Analyzing Twitter and E-commerce data',
-          'Review of data analytic methods using R'
-        ]
-      }
-    ]
-  },
-  // Elective – V Group (Sem 4)
-  {
-    id: 'mca-402-1',
-    code: 'MCA 402 (1)',
-    name: 'Deep Learning',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – V',
-    description: 'Feed-forward perceptrons, backpropagation in TensorFlow, CNN architectures (LeNet, AlexNet, ResNet), deep network regularization, LSTM, and Deep Q Networks.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Nikhil Buduma, Nicholas Locascio, "Fundamentals of Deep Learning", O\'Reilly, 2017',
-      'Sudharsan Ravichandiran, "Hands on Deep Learning Algorithms with Python", Packt, 2019',
-      'François Chollet, "Deep Learning with Python", Manning, 2017',
-      'Ian Goodfellow, Yoshua Bengio, Aaron Courville, "Deep Learning", MIT Press, 2016'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Neural Networks & Perceptrons',
-        topics: [
-          'Building intelligent machines, Perceptrons as artificial neurons',
-          'Feed-forward neural networks, activation functions',
-          'Single layer vs multilayer perceptrons, Backpropagation algorithm',
-          'XOR problem, limitations of backpropagation, TensorFlow implementations'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Convolutional Neural Networks (CNN)',
-        topics: [
-          'Filters, feature maps, max pooling, full CNN architecture',
-          'Image preprocessing pipelines, accelerating training with batch normalization',
-          'Visualizing learning in convolution layers, Transfer Learning with CNNs'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Deep Network Architectures & GANs',
-        topics: [
-          'Probabilistic theory of deep learning, VC dimension and neural nets',
-          'Deep vs shallow networks, Generative Adversarial Networks (GANs)',
-          'Semi-supervised learning'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Optimization & Recurrent Networks (RNN)',
-        topics: [
-          'Non-convex optimization, stochastic optimization, generalization',
-          'Spatial Transformer Networks',
-          'Recurrent Neural Networks (RNN), LSTM, language models, word-level RNNs'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Deep Reinforcement Learning',
-        topics: [
-          'Markov Decision Processes, Explore vs Exploit trade-offs',
-          'Policy vs Value Learning, Pole-Cart with policy gradients',
-          'Q-Learning and Deep Q Networks (DQN), advancing beyond DQN'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-402-2',
-    code: 'MCA 402 (2)',
-    name: 'Cloud Computing Technologies',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – V',
-    description: 'NIST cloud architecture, IaaS/PaaS/SaaS service models, hypervisors, server virtualization, AWS/Azure/GCP platforms, Hadoop MapReduce, and cloud security.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Anthony T. Velte, Toby J. Velte, Robert Elsenpeter, "Cloud Computing: A Practical Approach", McGrawHill',
-      'Kai Hwang, Geoffrey C. Fox, Jack G. Dongarra, "Distributed and Cloud Computing", Morgan Kaufmann',
-      'Ronald L. Krutz, Russell Dean Vines, "Cloud Security", Wiley'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Cloud Computing Fundamentals & Architecture',
-        topics: [
-          'Definition of Cloud Computing, cloud types and service models',
-          'Benefits and challenges of cloud computing, evolution of cloud computing',
-          'NIST architecture of cloud computing, applications, business models',
-          'Major players in cloud computing: Eucalyptus, Nimbus, OpenNebula, CloudSim, VMware'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Types of Computing & Cloud Deployment Models',
-        topics: [
-          'Cluster Computing, Grid Computing vs Cloud Computing',
-          'Key characteristics and benefits of cloud models',
-          'Public Cloud, Private Cloud, Hybrid Cloud, Community Cloud',
-          'Shared Private Cloud, Dedicated Private Cloud, Dynamic Private Cloud'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Cloud Services & File Systems',
-        topics: [
-          'SaaS, PaaS, IaaS, Database as a Service (DaaS), Monitoring as a Service',
-          'Communication as a Service',
-          'Service providers: Google App Engine, Amazon EC2, Microsoft Azure, Salesforce'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Virtualization & Distributed Infrastructure',
-        topics: [
-          'Virtualization basics, types and implementation levels',
-          'Virtualization of CPU, Memory, I/O devices, and OS',
-          'Virtualization for data center automation',
-          'Introduction to MapReduce, GFS, HDFS, Hadoop framework'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Cloud Security & Governance',
-        topics: [
-          'Security overview, challenges and risks in cloud computing',
-          'SaaS security, security monitoring, security architecture design',
-          'Data security, application security, virtual machine security',
-          'Identity Management and Access Control (IAM), autonomic security'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-402-3',
-    code: 'MCA 402 (3)',
-    name: 'Digital Marketing',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – V',
-    description: 'Search Engine Optimization (SEO), on-page and off-page optimization, Google AdWords SEM campaigns, mobile marketing, social media marketing, and email analytics.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Digital Firefly Marketing, "Big Book of Digital Marketing"',
-      'Damian Ryan, Calvin Jones, "Understanding Digital Marketing", Kogan Page',
-      'Alex Trengove Jones, Anna Malczyk, Justin Beneke, "Internet Marketing", GetSmarter'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Digital Marketing Introduction & SEO Basics',
-        topics: [
-          'What is Digital Marketing, Organic vs Paid digital marketing',
-          'Digital Marketing era and forward roadmaps for professionals',
-          'Search Engine Optimization (SEO): search engine ecosystem',
-          'Kinds of web traffic, search engine crawling and indexing'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'On-Page (OPO) & Off-Page Optimization',
-        topics: [
-          'On-page optimization: HTML, CSS, meta tags usage, graphic optimization',
-          'Contextual interlinking, microformats, schema markup',
-          'Off-page optimization: linking strategies, competitor analysis, link baiting',
-          'Article exchanges, social bookmarking, directory submissions'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Search Engine Marketing (SEM) & Google AdWords',
-        topics: [
-          'Introduction to SEM and paid advertising platforms',
-          'Google AdWords account structure, campaign creation, ad approval',
-          'Search & Display networks, keyword match types, Keyword Planner',
-          'Ad extensions, bidding strategies (Manual, Auto, CPC, CPA, CPM)'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Mobile, Video & Social Media Ads',
-        topics: [
-          'Mobile advertising: click-to-call campaigns, mobile ad optimization',
-          'YouTube advertising: video campaigns, in-stream ads, video ad metrics',
-          'Facebook Marketing: paid campaigns, custom audiences, Power Editor',
-          'AdWords billing management, Content marketing strategies'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Remarketing & Social Media Analytics',
-        topics: [
-          'Remarketing campaigns: custom combinations, URL rules, remarketing tags',
-          'AdWords Editor for bulk optimizations and account auditing',
-          'Company social media readiness, scheduling, Tumblr/influencer marketing'
-        ]
-      }
-    ]
-  },
-  // Elective – VI Group (Sem 4)
-  {
-    id: 'mca-403-1',
-    code: 'MCA 403 (1)',
-    name: 'Information Security',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – VI',
-    description: 'NSTISSC security model, security SDLC, threat investigations, access control matrix, risk assessment, ISO 17799/BS7799 standards, and IDS scanning tools.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Michael E Whitman and Herbert J Mattord, "Principles of Information Security", Vikas, 2003',
-      'Micki Krause, Harold F. Tipton, "Handbook of Information Security Management", CRC Press',
-      'Stuart McClure, Joel Scrambray, George Kurtz, "Hacking Exposed", Tata McGraw-Hill'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Information Security Introduction & Security SDLC',
-        topics: [
-          'What is Information Security, Critical characteristics of information',
-          'NSTISSC Security Model, Components of an Information System',
-          'Securing components, balancing security and access',
-          'Security Systems Development Life Cycle (SecSDLC)'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Security Investigation & Policies',
-        topics: [
-          'Need for security, business needs, threats and attacks',
-          'Legal, ethical and professional issues in security',
-          'Computer security overview, Access Control Matrix',
-          'Security policies, integrity policies, and hybrid policies'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Security Analysis & Risk Management',
-        topics: [
-          'Risk management: identifying, assessing, and controlling risk',
-          'Access control mechanisms',
-          'Information flow and confinement problems'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Logical Security Design & Standards',
-        topics: [
-          'Blueprint for security, Information Security Policy',
-          'Standards and practices: ISO 17799/BS7799, NIST models',
-          'VISA International Security Model, Design of Security Architecture',
-          'Planning for business continuity and disaster recovery'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Physical Design & Security Technologies',
-        topics: [
-          'Security technology: Intrusion Detection Systems (IDS/IPS)',
-          'Scanning and vulnerability analysis tools',
-          'Applied cryptography, access control devices, physical facility security',
-          'Security personnel policies'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-403-2',
-    code: 'MCA 403 (2)',
-    name: 'Block Chain And Cryptocurrency',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – VI',
-    description: 'Blockchain distributed ledger, proof-of-work/stake consensus, Bitcoin transactions, Ethereum EVM, smart contracts in Solidity, Hyperledger, and decentralized apps.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Josh Thompson, "Blockchain: The Blockchain for Beginnings", CreateSpace, 2017',
-      'Arvind Narayanan et al., "Bitcoin and Cryptocurrency Technologies", Princeton University Press, 2016'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Overview of Blockchain & Consensus',
-        topics: [
-          'Structure and data structure of Blockchain, data distribution',
-          'Block validation mechanisms',
-          'Block Validators: Proof of Work (PoW), Proof of Stake (PoS)',
-          'Proof of Activity, Proof of Elapsed Time, Proof of Burn'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Cryptocurrency, Bitcoin & Ethereum',
-        topics: [
-          'Bitcoin: working, transactions, mining, value, community and regulations',
-          'Advantages and disadvantages of Bitcoin',
-          'Ethereum: overview, decentralized applications (DApps)',
-          'Components of Ethereum: smart contracts, Ether, EVM, Etherscripter'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Hyperledger, Wallets & Truffle Framework',
-        topics: [
-          'Digital tokens overview: ICO, OmiseGO, EOS, Tether',
-          'MetaMask wallet, seed phrase, transactions, Mist wallet',
-          'Truffle framework: development boxes, community truffle suite'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Smart Contracts with Solidity & Fabric',
-        topics: [
-          'Smart contracts, contract state, interfaces in Solidity',
-          'Hyperledger Fabric: architecture, Fabric vs Ethereum',
-          'Hyperledger Iroha and Hyperledger Sawtooth components'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Enterprise Blockchain Platforms',
-        topics: [
-          'MultiChain, HydraChain architecture',
-          'Future blockchain networks: IOTA, Corda, Chain Core',
-          'Blockchain frameworks: CoCo Framework, Tierion, BigchainDB'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'mca-403-3',
-    code: 'MCA 403 (3)',
-    name: 'Mobile Computing',
-    semester: 4,
-    isElective: true,
-    electiveGroup: 'Elective – VI',
-    description: 'Wireless transmission multiplexing (SDMA, TDMA, CDMA), GSM architecture, Mobile IP, ad-hoc wireless routing (DSDV, DSR, AODV), MANETs, and mobile OS platforms.',
-    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    books: [
-      'Jochen Schiller, "Mobile Communications", 2nd Edition, Pearson Education, 2003',
-      'William Stallings, "Wireless Communications and Networks", 2nd Edition, Pearson'
-    ],
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Wireless Communication Fundamentals',
-        topics: [
-          'Mobile Computing vs Wireless Computing, characteristics and applications',
-          'Generations of mobile communication technologies',
-          'Multiplexing techniques, Spread Spectrum principles',
-          'MAC protocols: SDMA, TDMA, FDMA, CDMA'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'Telecommunication Systems & GSM',
-        topics: [
-          'Introduction to Cellular Systems, GSM System Architecture',
-          'Connection establishment, frequency allocation, routing',
-          'Mobility management, GSM security, GPRS architecture, handovers'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Mobile Network Layer & Routing Protocols',
-        topics: [
-          'Mobile IP, DHCP operations',
-          'Proactive protocols: DSDV; Reactive protocols: DSR, AODV; Hybrid routing: ZRP',
-          'Wireless LAN: IEEE 802.11 standards, architecture, services',
-          'HIPERLAN, Ad-hoc networks, Bluetooth'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Mobile Ad-Hoc Networks (MANET) & VANET',
-        topics: [
-          'MANET basic concepts, characteristics, design issues, routing essentials',
-          'Popular routing protocols in ad-hoc networks',
-          'Vehicular Ad-Hoc Networks (VANET), MANET vs VANET',
-          'Ad-hoc network security challenges'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Mobile Platforms, Applications & Security',
-        topics: [
-          'Mobile device operating systems, special constraints & requirements',
-          'Commercial operating systems and SDKs: iOS, Android, Windows Phone',
-          'M-Commerce structure, pros and cons, mobile payment systems, mobile security issues'
-        ]
-      }
-    ]
+    books: ['Arshdeep Bahga and Vijay Madisetti, "Internet of Things: A Hands-On Approach"'],
+    units: []
   },
   {
     id: 'mca-404',
     code: 'MCA 404',
-    name: 'Major Project / Industrial Dissertation',
+    name: 'Advanced Artificial Intelligence',
     semester: 4,
     isElective: false,
-    description: 'Full-term comprehensive capstone project with industry or university lab documentation, technical defense, and IEEE/UGC compliant dissertation submission.',
+    isProvisional: true,
+    description: 'Provisional advanced learning track based on Artificial Intelligence. Official university syllabus units and resources will be updated once confirmed by the university.',
     syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
-    units: [
-      {
-        unitNumber: 1,
-        title: 'Problem Formulation & Literature Review',
-        topics: [
-          'Domain identification, Literature survey synthesis',
-          'System feasibility analysis, Problem scope definition',
-          'Software Requirement Specification (SRS) documentation'
-        ]
-      },
-      {
-        unitNumber: 2,
-        title: 'System Design & Architectural Modeling',
-        topics: [
-          'High-level architectural design',
-          'UML class, use-case, sequence, and component diagrams',
-          'Database schema and normalized table designs',
-          'API contracts and module interface definitions'
-        ]
-      },
-      {
-        unitNumber: 3,
-        title: 'Implementation & Module Integration',
-        topics: [
-          'Source code structuring and adherence to industry coding standards',
-          'Version control management and pull request reviews',
-          'Module integration testing and error isolation',
-          'Security, authentication, and permission validation'
-        ]
-      },
-      {
-        unitNumber: 4,
-        title: 'Testing, Benchmarking & Results Analysis',
-        topics: [
-          'Unit, integration, and user acceptance testing (UAT)',
-          'Performance benchmarking and stress analysis',
-          'Experimental result evaluation and comparative performance metrics'
-        ]
-      },
-      {
-        unitNumber: 5,
-        title: 'Dissertation Thesis & Viva Defense',
-        topics: [
-          'Dissertation report writing adhering to university / IEEE format',
-          'Code repository archival and deployment verification',
-          'Technical presentation slide preparation',
-          'Comprehensive viva voce defense'
-        ]
-      }
-    ]
+    books: ['Stuart Russell and Peter Norvig, "Artificial Intelligence: A Modern Approach", Pearson'],
+    units: []
+  },
+  {
+    id: 'mca-405',
+    code: 'MCA 405',
+    name: 'Advanced Data Mining',
+    semester: 4,
+    isElective: false,
+    isProvisional: true,
+    description: 'Provisional advanced learning track based on Data Mining. Official university syllabus units and resources will be updated once confirmed by the university.',
+    syllabusPdfUrl: '/Syllora/assets/aistudio/Sem-4_05732143.pdf',
+    books: ['Jiawei Han, Micheline Kamber, Jian Pei, "Data Mining: Concepts and Techniques", Morgan Kaufmann'],
+    units: []
   }
 ];
 
@@ -2420,7 +1315,7 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'Mathematical intuition for Ordinary Least Squares, cost functions, gradient descent algorithms, and overfitting regularization.',
     courseId: 'mca',
     semesterId: 3,
-    subjectId: 'mca-304-1',
+    subjectId: 'mca-304',
     unitId: 2,
     fileUrl: '/mock-files/MCA304_Unit2_Regression.pdf',
     dateAdded: '2025-02-18',

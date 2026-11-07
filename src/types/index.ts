@@ -33,6 +33,7 @@ export interface Subject {
   name: string;
   semester: number;
   isElective: boolean;
+  isProvisional?: boolean;
   electiveGroup?: string;
   units: Unit[];
   description: string;

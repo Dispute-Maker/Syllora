@@ -4,6 +4,7 @@ import {
   Home,
   Compass,
   BookOpen,
+  Video,
   User,
   Settings,
   HelpCircle,
@@ -37,6 +38,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen, onClose }) => {
     { label: 'Home', path: '/', icon: Home },
     { label: 'Explore', path: '/explore', icon: Compass },
     { label: 'Courses', path: '/courses', icon: BookOpen },
+    { label: 'YouTube Learning', path: '/youtube-learning', icon: Video },
     { label: 'Profile', path: '/profile', icon: User },
     { label: 'Settings', path: '/settings', icon: Settings },
   ];

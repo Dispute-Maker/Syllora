@@ -172,47 +172,52 @@ export const CoursesPage: React.FC = () => {
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-base font-mono ${
-                        isActive
-                          ? 'bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D]'
-                          : 'bg-neutral-200/60 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-500'
-                      }`}
-                    >
-                      <Icon className="w-5 h-5 stroke-[2.2]" />
+                  {/* Line 1: Logo & Name (e.g. MCA) in one line with Badge on opposite side */}
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div
+                        className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-base flex-shrink-0 transition-colors ${
+                          isActive
+                            ? 'bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] group-hover:bg-[#E6A02D]/15'
+                            : 'bg-neutral-200/60 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-500'
+                        }`}
+                      >
+                        <Icon className="w-5 h-5 stroke-[2.2]" />
+                      </div>
+
+                      <span
+                        className={`text-xl font-bold font-['Poppins'] tracking-tight transition-colors whitespace-nowrap ${
+                          isActive
+                            ? 'text-[#25252B] dark:text-white group-hover:text-[#E6A02D]'
+                            : 'text-neutral-800 dark:text-neutral-200'
+                        }`}
+                      >
+                        {course.code}
+                      </span>
                     </div>
 
-                    {isActive ? (
-                      <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 border border-emerald-200/60 flex items-center gap-1 shadow-sm">
-                        <CheckCircle className="w-3 h-3" />
-                        <span>Available</span>
-                      </span>
-                    ) : (
-                      <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-neutral-200/60 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400 border border-neutral-300/40 dark:border-neutral-700 flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        <span>Coming Soon</span>
-                      </span>
-                    )}
+                    <div className="flex-shrink-0">
+                      {isActive ? (
+                        <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 border border-emerald-200/60 flex items-center gap-1 shadow-sm whitespace-nowrap">
+                          <CheckCircle className="w-3 h-3" />
+                          <span>Available</span>
+                        </span>
+                      ) : (
+                        <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-neutral-200/60 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400 border border-neutral-300/40 dark:border-neutral-700 flex items-center gap-1 whitespace-nowrap">
+                          <Clock className="w-3 h-3" />
+                          <span>Coming Soon</span>
+                        </span>
+                      )}
+                    </div>
                   </div>
 
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-xs font-mono font-bold text-[#E6A02D]">
-                      {course.code}
-                    </span>
-                  </div>
-
-                  <h3
-                    className={`text-lg font-bold font-['Poppins'] mt-1 transition-colors ${
-                      isActive
-                        ? 'text-[#25252B] dark:text-white group-hover:text-[#E6A02D]'
-                        : 'text-neutral-700 dark:text-neutral-300'
-                    }`}
-                  >
+                  {/* Line 2: Full name of the subject in one line, appearing completely */}
+                  <p className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 font-['Poppins'] whitespace-nowrap mb-2">
                     {course.name}
-                  </h3>
+                  </p>
 
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-3 leading-relaxed">
+                  {/* Course Description */}
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-3 leading-relaxed">
                     {course.description}
                   </p>
                 </div>
@@ -512,8 +517,7 @@ export const CoursesPage: React.FC = () => {
   // =========================================================================
   const currentSemester = currentCourse.semesters.find(s => s.number === Number(semesterNum));
   const semesterSubjects = SUBJECTS.filter(s => s.semester === Number(semesterNum));
-  const coreSubjects = semesterSubjects.filter(s => !s.isElective && s.units.length > 0);
-  const labSubjects = semesterSubjects.filter(s => s.units.length === 0);
+  const coreSubjects = semesterSubjects.filter(s => !s.isElective);
   const electiveSubjects = semesterSubjects.filter(s => s.isElective);
 
   // Group electives by group (e.g. "Elective – I", "Elective – II", etc.)
@@ -553,6 +557,20 @@ export const CoursesPage: React.FC = () => {
             </div>
             {renderCategorySwitcher()}
           </div>
+
+          {Number(semesterNum) === 4 && (
+            <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-700 dark:text-amber-400 flex items-start gap-2.5">
+              <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-500" />
+              <div className="space-y-0.5">
+                <p className="font-semibold text-neutral-900 dark:text-neutral-100">
+                  Provisional Advanced Continuation Structure
+                </p>
+                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Semester 4 subjects represent proposed continuation learning tracks based on Semester 3. Official university syllabus units, question papers, and study resources will be published once officially confirmed by RGPV.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Compulsory Core Subjects */}
@@ -591,7 +609,7 @@ export const CoursesPage: React.FC = () => {
                           {sub.code}
                         </span>
                         <span className="text-[10px] font-semibold text-neutral-400">
-                          {sub.units.length} Units
+                          {sub.isProvisional ? 'Curriculum Pending' : `${sub.units.length} Units`}
                         </span>
                       </div>
                       <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors">
@@ -701,55 +719,6 @@ export const CoursesPage: React.FC = () => {
                 </div>
               );
             })}
-          </div>
-        )}
-
-        {/* Practical Laboratory Subjects */}
-        {labSubjects.length > 0 && (
-          <div className="space-y-4 pt-4">
-            <h2 className="text-lg font-bold text-[#25252B] dark:text-white font-['Poppins'] flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span>Laboratory & Practical Courses</span>
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {labSubjects.map(sub => (
-                <div
-                  key={sub.id}
-                  onClick={() =>
-                    navigate(
-                      `/courses/${courseId}/semester/${semesterNum}/subject/${sub.id}${getCategoryQuery()}`
-                    )
-                  }
-                  className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="inline-block px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">
-                        {sub.code}
-                      </span>
-                      <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
-                        Practical Lab
-                      </span>
-                    </div>
-                    <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                      {sub.name}
-                    </h3>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-2 leading-relaxed">
-                      {sub.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs text-neutral-500">
-                    <span>{sub.practicals?.length || 0} Practical Experiments</span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                      <span>View Practicals</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         )}
       </div>
@@ -959,10 +928,18 @@ export const CoursesPage: React.FC = () => {
                 })}
               </div>
             ) : (
-              <div className="bg-white dark:bg-neutral-800 rounded-3xl p-8 text-center border border-neutral-100 dark:border-neutral-700/60">
-                <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
-                  Practical Course — See Lab Guidelines below
-                </p>
+              <div className="bg-white dark:bg-neutral-800 rounded-3xl p-8 sm:p-10 text-center border border-dashed border-neutral-200 dark:border-neutral-700 space-y-3 max-w-lg mx-auto">
+                <div className="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center mx-auto">
+                  <AlertCircle className="w-6 h-6" />
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-sm sm:text-base font-bold text-[#25252B] dark:text-white font-['Poppins']">
+                    Provisional Subject — Syllabus Pending
+                  </h3>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                    {currentSubject.name} is part of the proposed Semester 4 advanced academic structure. Verified syllabus units, lecture notes, and examination papers will be published upon official university confirmation.
+                  </p>
+                </div>
               </div>
             )}
           </div>

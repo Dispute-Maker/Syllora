@@ -10,6 +10,7 @@ import { RegisterPage } from './pages/RegisterPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { SettingsPage } from './pages/SettingsPage';
 import { HelpCenterPage } from './pages/HelpCenterPage';
+import { YouTubeLearningPage } from './pages/YouTubeLearningPage';
 
 export default function App() {
   return (
@@ -18,6 +19,14 @@ export default function App() {
         {/* Main Navigation Pages */}
         <Route path="/" element={<HomePage />} />
         <Route path="/explore" element={<ExplorePage />} />
+
+        {/* Syllabus-Driven YouTube Learning */}
+        <Route path="/youtube-learning" element={<YouTubeLearningPage />} />
+        <Route path="/youtube-learning/:courseId" element={<YouTubeLearningPage />} />
+        <Route path="/youtube-learning/:courseId/semester/:semesterNum" element={<YouTubeLearningPage />} />
+        <Route path="/youtube-learning/:courseId/semester/:semesterNum/subject/:subjectId" element={<YouTubeLearningPage />} />
+        <Route path="/youtube-learning/:courseId/semester/:semesterNum/subject/:subjectId/unit/:unitNum" element={<YouTubeLearningPage />} />
+        <Route path="/youtube-learning/:courseId/semester/:semesterNum/subject/:subjectId/unit/:unitNum/topic/:topicNum" element={<YouTubeLearningPage />} />
 
         {/* Academic Hierarchy Routing */}
         <Route path="/courses" element={<CoursesPage />} />
