@@ -13,8 +13,11 @@ interface Props {
 
 export const Breadcrumbs: React.FC<Props> = ({ items }) => {
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs md:text-sm text-neutral-500 dark:text-neutral-400 mb-6 flex-wrap">
-      <Link to="/" className="hover:text-[#E6A02D] transition-colors flex items-center gap-1">
+    <nav
+      aria-label="Breadcrumb"
+      className="flex items-center space-x-1.5 sm:space-x-2 text-xs md:text-sm text-neutral-500 dark:text-neutral-400 mb-3.5 sm:mb-6 overflow-x-auto no-scrollbar whitespace-nowrap py-0.5"
+    >
+      <Link to="/" className="hover:text-[#E6A02D] transition-colors flex items-center gap-1 flex-shrink-0">
         <Home className="w-3.5 h-3.5" />
         <span>Home</span>
       </Link>
@@ -24,11 +27,14 @@ export const Breadcrumbs: React.FC<Props> = ({ items }) => {
           <React.Fragment key={index}>
             <ChevronRight className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-600 flex-shrink-0" />
             {isLast || !item.path ? (
-              <span className="font-medium text-[#25252B] dark:text-neutral-200 truncate max-w-[200px] md:max-w-xs">
+              <span className="font-medium text-[#25252B] dark:text-neutral-200 truncate max-w-[170px] sm:max-w-[200px] md:max-w-xs flex-shrink-0">
                 {item.label}
               </span>
             ) : (
-              <Link to={item.path} className="hover:text-[#E6A02D] transition-colors truncate max-w-[150px] md:max-w-none">
+              <Link
+                to={item.path}
+                className="hover:text-[#E6A02D] transition-colors truncate max-w-[130px] sm:max-w-[150px] md:max-w-none flex-shrink-0"
+              >
                 {item.label}
               </Link>
             )}

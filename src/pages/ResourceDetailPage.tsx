@@ -43,12 +43,12 @@ export const ResourceDetailPage: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-8 max-w-5xl mx-auto pb-16">
+    <div className="space-y-5 sm:space-y-8 max-w-5xl mx-auto pb-16">
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Header Info */}
-      <div className="bg-white dark:bg-neutral-800 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white dark:bg-neutral-800 p-4 sm:p-7 rounded-2xl sm:rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-3 sm:space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-2.5">
           <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 dark:bg-amber-950 text-[#E6A02D]">
             {resource.type.toUpperCase()} DOCUMENT
           </span>

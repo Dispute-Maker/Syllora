@@ -54,29 +54,31 @@ export const ProfilePage: React.FC = () => {
       )}
 
       {/* Main Student Card */}
-      <div className="bg-white dark:bg-neutral-800 rounded-3xl p-8 border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-6">
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-neutral-100 dark:border-neutral-700/60">
-          <img
-            src={user.avatarUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80'}
-            alt={user.name}
-            className="w-24 h-24 rounded-full object-cover border-4 border-amber-300 shadow-md"
-          />
-          <div className="text-center sm:text-left space-y-1">
-            <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-50 text-[#E6A02D] dark:bg-amber-950/40">
-              Verified Student
-            </span>
-            <h2 className="text-xl font-bold text-[#25252B] dark:text-white">{user.name}</h2>
-            <p className="text-xs text-neutral-500 flex items-center justify-center sm:justify-start gap-1">
-              <Mail className="w-3.5 h-3.5" />
-              <span>{user.email}</span>
-            </p>
+      <div className="bg-white dark:bg-neutral-800 rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-4 sm:space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-neutral-100 dark:border-neutral-700/60">
+          <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+            <img
+              src={user.avatarUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80'}
+              alt={user.name}
+              className="w-14 h-14 sm:w-24 sm:h-24 rounded-full object-cover border-2 sm:border-4 border-amber-300 shadow-md flex-shrink-0"
+            />
+            <div className="text-left space-y-0.5 sm:space-y-1 min-w-0 flex-1">
+              <span className="inline-block px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-amber-50 text-[#E6A02D] dark:bg-amber-950/40">
+                Verified Student
+              </span>
+              <h2 className="text-base sm:text-xl font-bold text-[#25252B] dark:text-white truncate">{user.name}</h2>
+              <p className="text-xs text-neutral-500 flex items-center gap-1 truncate">
+                <Mail className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
+                <span className="truncate">{user.email}</span>
+              </p>
+            </div>
           </div>
 
           <div className="sm:ml-auto">
             {isEditing ? (
               <button
                 onClick={handleSave}
-                className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
               >
                 <Check className="w-3.5 h-3.5" />
                 <span>Save Changes</span>
@@ -84,7 +86,7 @@ export const ProfilePage: React.FC = () => {
             ) : (
               <button
                 onClick={() => setIsEditing(true)}
-                className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 text-neutral-700 dark:text-neutral-200 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 text-neutral-700 dark:text-neutral-200 text-xs font-semibold flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5" />
                 <span>Edit Profile</span>

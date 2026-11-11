@@ -34,8 +34,8 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center py-10 px-4">
-      <div className="max-w-md w-full bg-white dark:bg-neutral-800 rounded-3xl p-8 border border-neutral-100 dark:border-neutral-700/60 shadow-xl space-y-6">
+    <div className="min-h-[80vh] flex items-center justify-center py-6 sm:py-10 px-3 sm:px-4">
+      <div className="max-w-md w-full bg-white dark:bg-neutral-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-neutral-100 dark:border-neutral-700/60 shadow-xl space-y-5 sm:space-y-6">
         <div className="text-center space-y-2">
           <div className="w-12 h-12 rounded-2xl bg-[#E6A02D] text-white flex items-center justify-center mx-auto shadow-md">
             <GraduationCap className="w-7 h-7" />

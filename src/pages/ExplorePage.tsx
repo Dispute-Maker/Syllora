@@ -317,38 +317,38 @@ export const ExplorePage: React.FC = () => {
     switch (kind) {
       case 'notes':
         return (
-          <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-[#E6A02D] dark:bg-amber-500/15 flex items-center justify-center flex-shrink-0">
-            <FileText className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/10 text-[#E6A02D] dark:bg-amber-500/15 flex items-center justify-center flex-shrink-0">
+            <FileText className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
       case 'pyq':
         return (
-          <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 dark:bg-rose-500/15 dark:text-rose-400 flex items-center justify-center flex-shrink-0">
-            <Award className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-rose-500/10 text-rose-600 dark:bg-rose-500/15 dark:text-rose-400 flex items-center justify-center flex-shrink-0">
+            <Award className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
       case 'solution':
         return (
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
-            <CheckCircle2 className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
+            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
       case 'video':
         return (
-          <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 dark:bg-sky-500/15 dark:text-sky-400 flex items-center justify-center flex-shrink-0">
-            <PlayCircle className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-sky-500/10 text-sky-600 dark:bg-sky-500/15 dark:text-sky-400 flex items-center justify-center flex-shrink-0">
+            <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
       case 'subject':
         return (
-          <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:bg-purple-500/15 dark:text-purple-400 flex items-center justify-center flex-shrink-0">
-            <BookOpen className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-500/10 text-purple-600 dark:bg-purple-500/15 dark:text-purple-400 flex items-center justify-center flex-shrink-0">
+            <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
       case 'topic':
         return (
-          <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:bg-amber-500/15 dark:text-amber-400 flex items-center justify-center flex-shrink-0">
-            <Layers className="w-5 h-5 stroke-[2]" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/10 text-amber-600 dark:bg-amber-500/15 dark:text-amber-400 flex items-center justify-center flex-shrink-0">
+            <Layers className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2]" />
           </div>
         );
     }
@@ -359,12 +359,12 @@ export const ExplorePage: React.FC = () => {
   // =========================================================================
   if (!activeQuery) {
     return (
-      <div className="max-w-3xl mx-auto py-16 sm:py-24 px-4 text-center space-y-8 animate-fadeIn">
-        <div className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25252B] dark:text-white font-['Poppins'] tracking-tight">
+      <div className="max-w-3xl mx-auto py-8 sm:py-20 px-3 sm:px-4 text-center space-y-5 sm:space-y-8 animate-fadeIn">
+        <div className="space-y-2 sm:space-y-3">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#25252B] dark:text-white font-['Poppins'] tracking-tight leading-tight">
             What do you want to learn?
           </h1>
-          <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-base text-neutral-500 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Search across subjects, topics, notes and academic resources.
           </p>
         </div>
@@ -372,40 +372,40 @@ export const ExplorePage: React.FC = () => {
         {/* Prominent Center Search Form */}
         <form
           onSubmit={handleSearchSubmit}
-          className="bg-white dark:bg-neutral-800/95 p-2 rounded-2xl border border-neutral-200/80 dark:border-neutral-700/70 shadow-lg shadow-neutral-200/40 dark:shadow-none flex items-center gap-2 max-w-2xl mx-auto focus-within:border-[#E6A02D] focus-within:ring-2 focus-within:ring-[#E6A02D]/15 transition-all"
+          className="bg-white dark:bg-neutral-800/95 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl border border-neutral-200/80 dark:border-neutral-700/70 shadow-lg shadow-neutral-200/40 dark:shadow-none flex items-center gap-2 max-w-2xl mx-auto focus-within:border-[#E6A02D] focus-within:ring-2 focus-within:ring-[#E6A02D]/15 transition-all"
         >
           <div className="relative flex-1 flex items-center min-w-0">
-            <Search className="w-5 h-5 text-neutral-400 ml-3 flex-shrink-0" />
+            <Search className="w-4 h-4 sm:w-5 sm:h-5 text-neutral-400 ml-2.5 sm:ml-3 flex-shrink-0" />
             <input
               type="text"
               value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
               placeholder="Search subjects, topics, notes..."
               autoFocus
-              className="w-full bg-transparent px-3 py-2 text-sm text-[#25252B] dark:text-white focus:outline-none placeholder-neutral-400 font-normal"
+              className="w-full bg-transparent px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-[#25252B] dark:text-white focus:outline-none placeholder-neutral-400 font-normal"
             />
             {searchInput && (
               <button
                 type="button"
                 onClick={() => setSearchInput('')}
-                className="p-1.5 mr-1 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
+                className="p-1 sm:p-1.5 mr-1 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
                 aria-label="Clear input"
               >
-                <X className="w-4 h-4" />
+                <X className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
             )}
           </div>
           <button
             type="submit"
-            className="bg-[#E6A02D] hover:bg-[#cf8e24] text-white px-5 sm:px-6 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all shadow-sm cursor-pointer flex-shrink-0 active:scale-[0.98]"
+            className="bg-[#E6A02D] hover:bg-[#cf8e24] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm transition-all shadow-sm cursor-pointer flex-shrink-0 active:scale-[0.98]"
           >
             Search
           </button>
         </form>
 
         {/* Subtle whitespace-rich empty state message */}
-        <div className="pt-8 text-xs sm:text-sm text-neutral-400 dark:text-neutral-500 font-medium flex items-center justify-center gap-2">
-          <Lightbulb className="w-4 h-4 text-[#E6A02D]" />
+        <div className="pt-4 sm:pt-6 text-xs sm:text-sm text-neutral-400 dark:text-neutral-500 font-medium flex items-center justify-center gap-2">
+          <Lightbulb className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E6A02D]" />
           <span>Search for something to discover academic resources.</span>
         </div>
       </div>
@@ -416,7 +416,7 @@ export const ExplorePage: React.FC = () => {
   // 2. ACTIVE SEARCH RESULTS STATE
   // =========================================================================
   return (
-    <div className="space-y-6 max-w-4xl mx-auto pb-16 px-1 sm:px-0">
+    <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto pb-12 px-1 sm:px-0">
       {/* Top Search Toolbar */}
       <form
         onSubmit={handleSearchSubmit}
@@ -554,30 +554,30 @@ export const ExplorePage: React.FC = () => {
             <div
               key={item.id}
               onClick={() => navigate(item.actionUrl)}
-              className="group bg-white dark:bg-neutral-800/90 rounded-2xl border border-neutral-200/80 dark:border-neutral-700/60 p-4 sm:p-5 hover:border-[#E6A02D] dark:hover:border-[#E6A02D]/70 transition-all shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-md cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+              className="group bg-white dark:bg-neutral-800/90 rounded-xl sm:rounded-2xl border border-neutral-200/80 dark:border-neutral-700/60 p-3 sm:p-5 hover:border-[#E6A02D] dark:hover:border-[#E6A02D]/70 transition-all shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-md cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4"
             >
               {/* Left Section: Icon & Content */}
-              <div className="flex items-start gap-3.5 sm:gap-4 flex-1 min-w-0">
+              <div className="flex items-start gap-2.5 sm:gap-4 flex-1 min-w-0">
                 {renderItemIcon(item.kind)}
 
-                <div className="space-y-1.5 min-w-0 flex-1">
-                  <h3 className="text-sm sm:text-base font-bold text-[#25252B] dark:text-white font-['Poppins'] tracking-tight group-hover:text-[#E6A02D] transition-colors leading-snug">
+                <div className="space-y-1 min-w-0 flex-1">
+                  <h3 className="text-xs sm:text-base font-bold text-[#25252B] dark:text-white font-['Poppins'] tracking-tight group-hover:text-[#E6A02D] transition-colors leading-snug line-clamp-1 sm:line-clamp-none">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 sm:line-clamp-2 leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 sm:line-clamp-2 leading-relaxed">
                     {item.description}
                   </p>
 
                   {/* Metadata Chips */}
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs pt-0.5">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-xs pt-0.5">
                     <span className="font-medium text-neutral-700 dark:text-neutral-300">
-                      {item.courseCode} • Semester {item.semester}
+                      {item.courseCode} • Sem {item.semester}
                     </span>
                     <span className="text-neutral-300 dark:text-neutral-600 hidden sm:inline">
                       •
                     </span>
-                    <span className="text-neutral-600 dark:text-neutral-400 truncate max-w-[220px]">
+                    <span className="text-neutral-600 dark:text-neutral-400 truncate max-w-[180px] sm:max-w-[220px]">
                       {item.subjectCode} {item.subjectName}
                     </span>
                     {item.unitTitle && (
@@ -585,7 +585,7 @@ export const ExplorePage: React.FC = () => {
                         <span className="text-neutral-300 dark:text-neutral-600 hidden sm:inline">
                           •
                         </span>
-                        <span className="text-[#E6A02D] font-medium text-[11px] sm:text-xs">
+                        <span className="text-[#E6A02D] font-medium text-[10px] sm:text-xs truncate max-w-[140px] sm:max-w-none">
                           {item.unitTitle}
                         </span>
                       </>
@@ -595,9 +595,9 @@ export const ExplorePage: React.FC = () => {
               </div>
 
               {/* Right Section: Badges & Action Button */}
-              <div className="flex items-center justify-between sm:justify-end gap-2.5 sm:gap-3.5 pt-3 sm:pt-0 border-t sm:border-t-0 border-neutral-100 dark:border-neutral-700/60 flex-shrink-0">
+              <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-3.5 pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-100 dark:border-neutral-700/60 flex-shrink-0">
                 <span
-                  className={`inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-semibold whitespace-nowrap ${item.badgeStyle}`}
+                  className={`inline-flex items-center px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg text-[10px] sm:text-[11px] font-semibold whitespace-nowrap ${item.badgeStyle}`}
                 >
                   {item.badgeLabel}
                 </span>
@@ -608,10 +608,10 @@ export const ExplorePage: React.FC = () => {
                     e.stopPropagation();
                     navigate(item.actionUrl);
                   }}
-                  className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-xl bg-neutral-50 dark:bg-neutral-700/50 hover:bg-[#E6A02D] dark:hover:bg-[#E6A02D] text-neutral-700 dark:text-neutral-200 hover:text-white dark:hover:text-white text-xs font-semibold transition-all border border-neutral-200 dark:border-neutral-700 hover:border-transparent cursor-pointer flex-shrink-0"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl bg-neutral-50 dark:bg-neutral-700/50 hover:bg-[#E6A02D] dark:hover:bg-[#E6A02D] text-neutral-700 dark:text-neutral-200 hover:text-white dark:hover:text-white text-[11px] sm:text-xs font-semibold transition-all border border-neutral-200 dark:border-neutral-700 hover:border-transparent cursor-pointer flex-shrink-0"
                 >
                   <span>{item.actionLabel}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
             </div>

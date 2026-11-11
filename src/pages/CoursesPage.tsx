@@ -130,7 +130,8 @@ export const CoursesPage: React.FC = () => {
           }`}
         >
           <FileQuestion className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
-          <span>Question Papers</span>
+          <span className="sm:hidden">Papers</span>
+          <span className="hidden sm:inline">Question Papers</span>
         </button>
       </div>
     );
@@ -151,8 +152,8 @@ export const CoursesPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Six Course Selection Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Six Course Selection Grid - Compact on Mobile, 2 on Tablet, 3 on Desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
           {COURSES.map(course => {
             const isActive = course.status === 'active';
             const Icon = getCourseIcon(course.id);
@@ -165,73 +166,73 @@ export const CoursesPage: React.FC = () => {
                     navigate(`/courses/${course.id}`);
                   }
                 }}
-                className={`p-6 sm:p-7 rounded-3xl border transition-all flex flex-col justify-between ${
+                className={`p-3.5 sm:p-6 lg:p-7 rounded-2xl sm:rounded-3xl border transition-all flex flex-col justify-between h-full ${
                   isActive
                     ? 'bg-white dark:bg-neutral-800 border-neutral-200/80 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer group'
                     : 'bg-neutral-50/70 dark:bg-neutral-900/40 border border-neutral-200/60 dark:border-neutral-800 cursor-default select-none'
                 }`}
               >
-                <div>
-                  {/* Line 1: Logo & Name (e.g. MCA) in one line with Badge on opposite side */}
-                  <div className="flex items-center justify-between gap-3 mb-3">
-                    <div className="flex items-center gap-3 min-w-0">
+                <div className="flex flex-col flex-1">
+                  {/* Clean Aligned Header: Icon on left, Code & Full Name beside it, Badge on the right */}
+                  <div className="flex items-start justify-between gap-2.5 sm:gap-3 mb-2.5 sm:mb-3.5">
+                    <div className="flex items-center gap-2.5 sm:gap-3.5 min-w-0 flex-1">
                       <div
-                        className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-base flex-shrink-0 transition-colors ${
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors ${
                           isActive
                             ? 'bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] group-hover:bg-[#E6A02D]/15'
                             : 'bg-neutral-200/60 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-500'
                         }`}
                       >
-                        <Icon className="w-5 h-5 stroke-[2.2]" />
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
                       </div>
 
-                      <span
-                        className={`text-xl font-bold font-['Poppins'] tracking-tight transition-colors whitespace-nowrap ${
-                          isActive
-                            ? 'text-[#25252B] dark:text-white group-hover:text-[#E6A02D]'
-                            : 'text-neutral-800 dark:text-neutral-200'
-                        }`}
-                      >
-                        {course.code}
-                      </span>
+                      <div className="min-w-0 flex-1">
+                        <h2
+                          className={`text-base sm:text-xl font-bold font-['Poppins'] tracking-tight transition-colors truncate leading-tight ${
+                            isActive
+                              ? 'text-[#25252B] dark:text-white group-hover:text-[#E6A02D]'
+                              : 'text-neutral-800 dark:text-neutral-200'
+                          }`}
+                        >
+                          {course.code}
+                        </h2>
+                        <p className="text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-300 font-['Poppins'] truncate mt-0.5 leading-snug">
+                          {course.name}
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 pt-0.5">
                       {isActive ? (
-                        <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 border border-emerald-200/60 flex items-center gap-1 shadow-sm whitespace-nowrap">
-                          <CheckCircle className="w-3 h-3" />
+                        <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[9.5px] sm:text-[11px] font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 border border-emerald-200/60 flex items-center gap-1 shadow-sm whitespace-nowrap">
+                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
                           <span>Available</span>
                         </span>
                       ) : (
-                        <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-neutral-200/60 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400 border border-neutral-300/40 dark:border-neutral-700 flex items-center gap-1 whitespace-nowrap">
-                          <Clock className="w-3 h-3" />
+                        <span className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[9.5px] sm:text-[11px] font-semibold bg-neutral-200/60 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400 border border-neutral-300/40 dark:border-neutral-700 flex items-center gap-1 whitespace-nowrap">
+                          <Clock className="w-3 h-3 flex-shrink-0" />
                           <span>Coming Soon</span>
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {/* Line 2: Full name of the subject in one line, appearing completely */}
-                  <p className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 font-['Poppins'] whitespace-nowrap mb-2">
-                    {course.name}
-                  </p>
-
-                  {/* Course Description */}
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-3 leading-relaxed">
+                  {/* Course Description - cleanly aligned with equal vertical distribution */}
+                  <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 line-clamp-2 sm:line-clamp-3 leading-normal sm:leading-relaxed flex-1">
                     {course.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs font-semibold">
-                  <span className="text-neutral-400 text-[11px]">{course.duration}</span>
+                <div className="mt-3 sm:mt-6 pt-2.5 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-[11px] sm:text-xs font-semibold">
+                  <span className="text-neutral-400 text-[10px] sm:text-[11px]">{course.duration}</span>
                   {isActive ? (
                     <span className="text-[#E6A02D] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      <span>Explore MCA</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span>Explore {course.code}</span>
+                      <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </span>
                   ) : (
-                    <span className="text-neutral-400 dark:text-neutral-500 text-[11px] font-normal">
-                      Curriculum in preparation
+                    <span className="text-neutral-400 dark:text-neutral-500 text-[10px] sm:text-[11px] font-normal">
+                      Curriculum in prep
                     </span>
                   )}
                 </div>
@@ -288,24 +289,24 @@ export const CoursesPage: React.FC = () => {
 
         {/* Compact Official Syllabus Document Card */}
         {pdfPath ? (
-          <div className="bg-white dark:bg-neutral-800/90 rounded-3xl border border-neutral-200/80 dark:border-neutral-700/60 p-6 sm:p-8 shadow-sm space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5">
-              <div className="flex items-start gap-4">
+          <div className="bg-white dark:bg-neutral-800/90 rounded-2xl sm:rounded-3xl border border-neutral-200/80 dark:border-neutral-700/60 p-4 sm:p-7 shadow-sm space-y-4 sm:space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
                 {/* PDF Document Icon */}
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <FileText className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2]" />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <FileText className="w-5 h-5 sm:w-7 sm:h-7 stroke-[2]" />
                 </div>
 
-                <div className="space-y-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-md text-[10.5px] font-mono font-bold bg-[#E6A02D]/15 text-[#E6A02D]">
+                <div className="space-y-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <span className="px-2 py-0.5 rounded-md text-[10px] sm:text-[10.5px] font-mono font-bold bg-[#E6A02D]/15 text-[#E6A02D]">
                       MCA • Semester {semesterNum}
                     </span>
-                    <span className="px-2 py-0.5 rounded text-[10.5px] font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200/40 dark:border-emerald-800/40">
-                      Verified Document
+                    <span className="px-2 py-0.5 rounded text-[10px] sm:text-[10.5px] font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200/40 dark:border-emerald-800/40">
+                      Verified
                     </span>
                   </div>
-                  <h1 className="text-xl sm:text-2xl font-bold text-[#25252B] dark:text-white font-['Poppins']">
+                  <h1 className="text-lg sm:text-2xl font-bold text-[#25252B] dark:text-white font-['Poppins'] leading-tight">
                     Semester {semesterNum} Official Syllabus
                   </h1>
                   <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400">
@@ -322,24 +323,24 @@ export const CoursesPage: React.FC = () => {
               </p>
             )}
 
-            {/* Action Buttons: View PDF & Download PDF */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            {/* Action Buttons: 2-column grid on mobile to eliminate vertical stacking waste */}
+            <div className="pt-2 grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3">
               <a
                 href={pdfPath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#E6A02D] hover:bg-[#cf8e24] text-white text-xs sm:text-sm font-semibold transition-all shadow-sm cursor-pointer active:scale-[0.99]"
+                className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#E6A02D] hover:bg-[#cf8e24] text-white text-xs sm:text-sm font-semibold transition-all shadow-sm cursor-pointer active:scale-[0.99] whitespace-nowrap"
               >
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                 <span>View PDF</span>
               </a>
 
               <a
                 href={pdfPath}
                 download={`Sem-${semesterNum}.pdf`}
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-200 text-xs sm:text-sm font-semibold transition-all cursor-pointer active:scale-[0.99]"
+                className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-200 text-xs sm:text-sm font-semibold transition-all cursor-pointer active:scale-[0.99] whitespace-nowrap"
               >
-                <Download className="w-4 h-4" />
+                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                 <span>Download PDF</span>
               </a>
             </div>
@@ -410,40 +411,70 @@ export const CoursesPage: React.FC = () => {
 
         {/* SYLLABUS LANDING PAGE: Four Simple Semester Cards */}
         {activeCategory === 'syllabus' ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {currentCourse.semesters.map(sem => {
+              const semSubjects = SUBJECTS.filter(
+                s => s.semester === sem.number
+              );
+
               return (
                 <div
                   key={sem.number}
                   onClick={() =>
                     navigate(`/courses/${courseId}/semester/${sem.number}?category=syllabus`)
                   }
-                  className="group bg-white dark:bg-neutral-800 p-6 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between"
+                  className="group bg-white dark:bg-neutral-800 p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between h-full"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center font-bold text-base font-mono">
-                        Sem {sem.number}
+                  <div className="flex flex-col flex-1">
+                    {/* Header: Horizontal on mobile (Sem badge + Title side by side); Stacked on desktop */}
+                    <div className="flex items-center justify-between gap-2.5 mb-2 sm:mb-4">
+                      <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
+                        <div className="min-w-[54px] sm:min-w-[62px] h-8 sm:h-11 px-2.5 sm:px-3 rounded-xl sm:rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center font-bold text-xs sm:text-sm font-mono whitespace-nowrap flex-shrink-0 shadow-sm border border-amber-200/40 dark:border-amber-900/40">
+                          Sem {sem.number}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-sm sm:text-lg text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors font-['Poppins'] truncate">
+                            Semester {sem.number}
+                          </h3>
+                          <span className="sm:hidden text-[10px] text-neutral-400 block truncate">
+                            {semSubjects.length} Prescribed Subjects
+                          </span>
+                        </div>
                       </div>
-                      <span className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center">
-                        <FileText className="w-4 h-4 stroke-[2.2]" />
+                      <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center flex-shrink-0">
+                        <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
                       </span>
                     </div>
 
-                    <h3 className="font-bold text-lg text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors font-['Poppins']">
-                      Semester {sem.number}
-                    </h3>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-2 leading-relaxed">
+                    {/* Mobile Subject Chips Preview */}
+                    <div className="flex flex-wrap gap-1 sm:hidden mt-1.5">
+                      {semSubjects.slice(0, 3).map(sub => (
+                        <span
+                          key={sub.id}
+                          className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-700/60 text-neutral-600 dark:text-neutral-300 font-medium"
+                        >
+                          {sub.code}
+                        </span>
+                      ))}
+                      {semSubjects.length > 3 && (
+                        <span className="text-[10px] px-1 py-0.5 text-neutral-400 font-medium">
+                          +{semSubjects.length - 3} more
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Desktop Description */}
+                    <p className="hidden sm:block text-xs text-neutral-500 dark:text-neutral-400 mt-1 sm:mt-2 line-clamp-2 leading-relaxed flex-1">
                       {sem.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs font-semibold">
-                    <span className="text-[11px] font-mono text-neutral-400">
+                  <div className="mt-3 sm:mt-6 pt-2.5 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-[11px] sm:text-xs font-semibold">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-neutral-400">
                       Sem-{sem.number}.pdf
                     </span>
                     <span className="text-[#E6A02D] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                      <span>View Official Syllabus</span>
+                      <span>View Syllabus</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -453,9 +484,11 @@ export const CoursesPage: React.FC = () => {
           </div>
         ) : (
           /* Notes & Question Papers Semester Selection Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {currentCourse.semesters.map(sem => {
-              const semSubjects = SUBJECTS.filter(s => s.semester === sem.number);
+              const semSubjects = SUBJECTS.filter(
+                s => s.semester === sem.number
+              );
               const semNotesCount = MOCK_RESOURCES.filter(
                 r => r.semesterId === sem.number && r.type === 'notes'
               ).length;
@@ -469,36 +502,62 @@ export const CoursesPage: React.FC = () => {
                   onClick={() =>
                     navigate(`/courses/${courseId}/semester/${sem.number}${getCategoryQuery()}`)
                   }
-                  className="group bg-white dark:bg-neutral-800 p-6 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between"
+                  className="group bg-white dark:bg-neutral-800 p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between h-full"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-11 h-11 rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center font-bold text-sm">
-                        Sem {sem.number}
+                  <div className="flex flex-col flex-1">
+                    {/* Header: Horizontal on mobile */}
+                    <div className="flex items-center justify-between gap-2.5 mb-2 sm:mb-4">
+                      <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
+                        <div className="min-w-[54px] sm:min-w-[62px] h-8 sm:h-11 px-2.5 sm:px-3 rounded-xl sm:rounded-2xl bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] flex items-center justify-center font-bold text-xs sm:text-sm font-mono whitespace-nowrap flex-shrink-0 shadow-sm border border-amber-200/40 dark:border-amber-900/40">
+                          Sem {sem.number}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-sm sm:text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors truncate">
+                            {sem.title}
+                          </h3>
+                          <span className="sm:hidden text-[10px] text-neutral-400 block truncate">
+                            {semSubjects.length} Subjects
+                          </span>
+                        </div>
                       </div>
-                      <span className="text-[10px] font-semibold text-neutral-400 bg-neutral-100 dark:bg-neutral-700/60 px-2 py-0.5 rounded-md">
-                        {activeCategory === 'notes' ? 'Notes' : 'PYQ Papers'}
+                      <span className="text-[9.5px] sm:text-[10px] font-semibold text-neutral-400 bg-neutral-100 dark:bg-neutral-700/60 px-2 py-0.5 rounded-md flex-shrink-0 whitespace-nowrap">
+                        {activeCategory === 'notes' ? 'Notes' : 'PYQ'}
                       </span>
                     </div>
 
-                    <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors">
-                      {sem.title}
-                    </h3>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-3 leading-relaxed">
+                    {/* Mobile Subject Chips Preview */}
+                    <div className="flex flex-wrap gap-1 sm:hidden mt-1.5">
+                      {semSubjects.slice(0, 3).map(sub => (
+                        <span
+                          key={sub.id}
+                          className="text-[10px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-700/60 text-neutral-600 dark:text-neutral-300 font-medium"
+                        >
+                          {sub.code}
+                        </span>
+                      ))}
+                      {semSubjects.length > 3 && (
+                        <span className="text-[10px] px-1 py-0.5 text-neutral-400 font-medium">
+                          +{semSubjects.length - 3} more
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Desktop Description */}
+                    <p className="hidden sm:block text-xs text-neutral-500 dark:text-neutral-400 mt-1 sm:mt-2 line-clamp-2 sm:line-clamp-3 leading-relaxed flex-1">
                       {sem.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs text-neutral-500">
-                    <span className="font-medium text-[11px]">
+                  <div className="mt-3 sm:mt-6 pt-2.5 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-[11px] sm:text-xs text-neutral-500">
+                    <span className="font-medium text-[10px] sm:text-[11px]">
                       {activeCategory === 'notes' &&
-                        `${semNotesCount} ${semNotesCount === 1 ? 'Note' : 'Notes'} Available`}
+                        `${semNotesCount} ${semNotesCount === 1 ? 'Note' : 'Notes'}`}
                       {activeCategory === 'pyq' &&
-                        `${semPyqCount} ${semPyqCount === 1 ? 'Paper' : 'Papers'} Available`}
+                        `${semPyqCount} ${semPyqCount === 1 ? 'Paper' : 'Papers'}`}
                     </span>
-                    <span className="text-[#E6A02D] font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                    <span className="text-[#E6A02D] font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
                       <span>
-                        {activeCategory === 'notes' ? 'Browse Notes' : 'View Papers'}
+                        {activeCategory === 'notes' ? 'Browse' : 'View'}
                       </span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </span>
@@ -584,7 +643,7 @@ export const CoursesPage: React.FC = () => {
               <span className="text-xs text-neutral-400">{coreSubjects.length} Subjects</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5">
               {coreSubjects.map(sub => {
                 const subNotesCount = MOCK_RESOURCES.filter(
                   r => r.subjectId === sub.id && r.type === 'notes'
@@ -601,33 +660,33 @@ export const CoursesPage: React.FC = () => {
                         `/courses/${courseId}/semester/${semesterNum}/subject/${sub.id}${getCategoryQuery()}`
                       )
                     }
-                    className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between"
+                    className="group bg-white dark:bg-neutral-800 p-3.5 sm:p-5 lg:p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col justify-between h-full"
                   >
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="inline-block px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-neutral-100 dark:bg-neutral-700 text-[#25252B] dark:text-neutral-200">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex items-center justify-between mb-2 sm:mb-3 gap-2">
+                        <span className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono font-bold bg-neutral-100 dark:bg-neutral-700 text-[#25252B] dark:text-neutral-200 whitespace-nowrap flex-shrink-0">
                           {sub.code}
                         </span>
-                        <span className="text-[10px] font-semibold text-neutral-400">
+                        <span className="text-[10px] sm:text-[11px] font-semibold text-neutral-400 whitespace-nowrap flex-shrink-0">
                           {sub.isProvisional ? 'Curriculum Pending' : `${sub.units.length} Units`}
                         </span>
                       </div>
-                      <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors">
+                      <h3 className="font-bold text-sm sm:text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors leading-snug">
                         {sub.name}
                       </h3>
-                      <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-2 leading-relaxed">
+                      <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-1 sm:mt-2 line-clamp-1 sm:line-clamp-2 leading-normal sm:leading-relaxed flex-1">
                         {sub.description}
                       </p>
                     </div>
 
-                    <div className="mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs text-neutral-500">
-                      <span>
+                    <div className="mt-3 sm:mt-5 pt-2.5 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-[11px] sm:text-xs text-neutral-500">
+                      <span className="text-[10.5px] sm:text-[11px]">
                         {activeCategory === 'notes' &&
                           (subNotesCount > 0 ? `${subNotesCount} Available` : 'No Notes Yet')}
                         {activeCategory === 'pyq' &&
                           (subPyqCount > 0 ? `${subPyqCount} Available` : 'No PYQs Yet')}
                       </span>
-                      <span className="text-[#E6A02D] font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                      <span className="text-[#E6A02D] font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
                         <span>{activeCategory === 'notes' ? 'Notes' : 'Papers'}</span>
                         <ChevronRight className="w-3.5 h-3.5" />
                       </span>
@@ -641,9 +700,9 @@ export const CoursesPage: React.FC = () => {
 
         {/* Departmental Electives (Semesters 3 & 4) */}
         {electiveGroups.length > 0 && (
-          <div className="space-y-6 pt-4">
+          <div className="space-y-4 sm:space-y-6 pt-2 sm:pt-4">
             <div>
-              <h2 className="text-lg font-bold text-[#25252B] dark:text-white font-['Poppins'] flex items-center gap-2">
+              <h2 className="text-base sm:text-lg font-bold text-[#25252B] dark:text-white font-['Poppins'] flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-purple-500" />
                 <span>Departmental Elective Courses</span>
               </h2>
@@ -656,15 +715,15 @@ export const CoursesPage: React.FC = () => {
               const groupSubjects = electiveSubjects.filter(s => s.electiveGroup === groupName);
 
               return (
-                <div key={groupName} className="space-y-3">
+                <div key={groupName} className="space-y-2.5 sm:space-y-3">
                   <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300">
+                    <span className="px-2.5 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300">
                       {groupName}
                     </span>
-                    <span className="text-xs text-neutral-400">Choose one subject from this bracket</span>
+                    <span className="text-[11px] sm:text-xs text-neutral-400">Choose one subject from this bracket</span>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5">
                     {groupSubjects.map(sub => {
                       const subNotesCount = MOCK_RESOURCES.filter(
                         r => r.subjectId === sub.id && r.type === 'notes'
@@ -681,33 +740,33 @@ export const CoursesPage: React.FC = () => {
                               `/courses/${courseId}/semester/${semesterNum}/subject/${sub.id}${getCategoryQuery()}`
                             )
                           }
-                          className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl border border-purple-100 dark:border-purple-900/30 shadow-sm hover:shadow-md hover:border-purple-500 cursor-pointer transition-all flex flex-col justify-between"
+                          className="group bg-white dark:bg-neutral-800 p-3.5 sm:p-5 lg:p-6 rounded-2xl border border-purple-100 dark:border-purple-900/30 shadow-sm hover:shadow-md hover:border-purple-500 cursor-pointer transition-all flex flex-col justify-between h-full"
                         >
-                          <div>
-                            <div className="flex items-center justify-between mb-3">
-                              <span className="inline-block px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300">
+                          <div className="flex flex-col flex-1">
+                            <div className="flex items-center justify-between mb-2 sm:mb-3 gap-2">
+                              <span className="inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono font-bold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 whitespace-nowrap flex-shrink-0">
                                 {sub.code}
                               </span>
-                              <span className="text-[10px] font-semibold text-neutral-400">
+                              <span className="text-[10px] sm:text-[11px] font-semibold text-neutral-400 whitespace-nowrap flex-shrink-0">
                                 {sub.units.length} Units
                               </span>
                             </div>
-                            <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                            <h3 className="font-bold text-sm sm:text-base text-[#25252B] dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors leading-snug">
                               {sub.name}
                             </h3>
-                            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-2 line-clamp-2 leading-relaxed">
+                            <p className="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-1 sm:mt-2 line-clamp-1 sm:line-clamp-2 leading-normal sm:leading-relaxed flex-1">
                               {sub.description}
                             </p>
                           </div>
 
-                          <div className="mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-xs text-neutral-500">
-                            <span>
+                          <div className="mt-3 sm:mt-5 pt-2.5 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700/60 flex items-center justify-between text-[11px] sm:text-xs text-neutral-500">
+                            <span className="text-[10.5px] sm:text-[11px]">
                               {activeCategory === 'notes' &&
                                 (subNotesCount > 0 ? `${subNotesCount} Available` : 'No Notes Yet')}
                               {activeCategory === 'pyq' &&
                                 (subPyqCount > 0 ? `${subPyqCount} Available` : 'No PYQs Yet')}
                             </span>
-                            <span className="text-purple-600 dark:text-purple-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                            <span className="text-purple-600 dark:text-purple-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
                               <span>Explore</span>
                               <ChevronRight className="w-3.5 h-3.5" />
                             </span>
@@ -879,20 +938,38 @@ export const CoursesPage: React.FC = () => {
                           `/courses/${courseId}/semester/${semesterNum}/subject/${subjectId}/unit/${unit.unitNumber}${getCategoryQuery()}`
                         )
                       }
-                      className="group bg-white dark:bg-neutral-800 p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                      className="group bg-white dark:bg-neutral-800 p-3.5 sm:p-5 md:p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm hover:shadow-md hover:border-[#E6A02D] cursor-pointer transition-all flex flex-col md:flex-row md:items-center justify-between gap-2.5 sm:gap-4"
                     >
-                      <div className="space-y-2 max-w-2xl">
+                      <div className="space-y-1 sm:space-y-2 max-w-2xl min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className="px-2.5 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] font-bold text-xs">
+                          <span className="px-2 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/40 text-[#E6A02D] font-bold text-xs flex-shrink-0">
                             Unit {unit.unitNumber}
                           </span>
-                          <h3 className="font-bold text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors">
+                          <h3 className="font-bold text-sm sm:text-base text-[#25252B] dark:text-white group-hover:text-[#E6A02D] transition-colors truncate sm:whitespace-normal">
                             {unit.title}
                           </h3>
                         </div>
 
-                        <div className="flex flex-wrap gap-1.5 pt-1">
-                          {unit.topics.slice(0, 5).map((t, idx) => (
+                        {/* Mobile Topic Chips (first 2 + counter) */}
+                        <div className="flex flex-wrap gap-1 sm:hidden pt-0.5">
+                          {unit.topics.slice(0, 2).map((t, idx) => (
+                            <span
+                              key={idx}
+                              className="text-[10px] bg-neutral-100 dark:bg-neutral-700/60 text-neutral-600 dark:text-neutral-300 px-2 py-0.5 rounded truncate max-w-[150px]"
+                            >
+                              {t}
+                            </span>
+                          ))}
+                          {unit.topics.length > 2 && (
+                            <span className="text-[10px] text-neutral-400 px-1 py-0.5 font-medium">
+                              +{unit.topics.length - 2} more
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Desktop Topic Chips (first 4 + counter) */}
+                        <div className="hidden sm:flex flex-wrap gap-1.5 pt-0.5">
+                          {unit.topics.slice(0, 4).map((t, idx) => (
                             <span
                               key={idx}
                               className="text-[11px] bg-neutral-100 dark:bg-neutral-700/60 text-neutral-600 dark:text-neutral-300 px-2 py-0.5 rounded"
@@ -900,25 +977,25 @@ export const CoursesPage: React.FC = () => {
                               {t}
                             </span>
                           ))}
-                          {unit.topics.length > 5 && (
+                          {unit.topics.length > 4 && (
                             <span className="text-[11px] text-neutral-400 px-1 py-0.5">
-                              +{unit.topics.length - 5} more
+                              +{unit.topics.length - 4} more
                             </span>
                           )}
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-4 flex-shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-neutral-100 dark:border-neutral-700/60">
-                        <span className="text-xs font-medium text-neutral-400">
+                      <div className="flex items-center justify-between md:justify-end gap-3 sm:gap-4 flex-shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-neutral-100 dark:border-neutral-700/60">
+                        <span className="text-[11px] sm:text-xs font-medium text-neutral-400">
                           {unitNotes.length > 0 ? (
-                            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                            <span className="text-emerald-600 dark:text-emerald-400 font-semibold text-[11px] sm:text-xs">
                               {unitNotes.length} {unitNotes.length === 1 ? 'Note' : 'Notes'}
                             </span>
                           ) : (
                             'No notes uploaded yet'
                           )}
                         </span>
-                        <button className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-700 group-hover:bg-[#E6A02D] group-hover:text-white text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition-colors flex items-center gap-1 cursor-pointer">
+                        <button className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-neutral-100 dark:bg-neutral-700 group-hover:bg-[#E6A02D] group-hover:text-white text-[11px] sm:text-xs font-semibold text-neutral-700 dark:text-neutral-200 transition-colors flex items-center gap-1 cursor-pointer">
                           <span>Explore Notes</span>
                           <ChevronRight className="w-3.5 h-3.5" />
                         </button>
@@ -984,8 +1061,8 @@ export const CoursesPage: React.FC = () => {
       />
 
       {/* Unit Banner */}
-      <div className="bg-white dark:bg-neutral-800 p-8 rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-4">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-neutral-800 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-neutral-100 dark:border-neutral-700/60 shadow-sm space-y-3 sm:space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-1 rounded bg-[#E6A02D]/15 text-[#E6A02D] font-mono font-bold text-xs">
